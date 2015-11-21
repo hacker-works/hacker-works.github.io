@@ -1,0 +1,13 @@
+# Site settings
+title: hacker.works manifesto website 
+email: vladi@hacker.works
+description: > # this means to ignore newlines until "baseurl:"
+  This is the declaration of the intentions, motives and views of the 
+  hacker.works group.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://hacker.works" # the base hostname & protocol for your site
+twitter_username: npacemo
+github_username:  hacker-works
+
+# Build settings
+markdown: kramdown
