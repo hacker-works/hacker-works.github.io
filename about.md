@@ -4,8 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+[hacker.works](/about) is the work name of a small and loosely structured group of individuals working together united by a set of core values and attitudes, such as partnership, care for their colleagues, respect, responsibility and professional behavior.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+The [hacker.works](/about) and its members look into the future with growing optimism and confidence in the success of their ambitious initiative.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+[hacker.works](/about) unite!
