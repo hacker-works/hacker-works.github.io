@@ -2,8 +2,8 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    border-top: 5px solid $orange;
+    border-bottom: 1px solid $orange;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
@@ -92,12 +92,13 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
+    border-top: 1px solid $blue;
     padding: $spacing-unit 0;
 }
 
 .footer-heading {
     font-size: 18px;
+    color: $blue;
     margin-bottom: $spacing-unit / 2;
 }
 
@@ -109,7 +110,7 @@
 
 .footer-col-wrapper {
     font-size: 15px;
-    color: $grey-color;
+    color: $base01;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
 }
@@ -133,6 +134,11 @@
 .footer-col-3 {
     width: -webkit-calc(45% - (#{$spacing-unit} / 2));
     width:         calc(45% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-2-3 {
+    width: -webkit-calc(65% - (#{$spacing-unit} / 2));
+    width:         calc(65% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
