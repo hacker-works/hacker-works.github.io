@@ -243,6 +243,15 @@
         }
     }
 
+    h5 {
+        font-size: 18px;
+        color: $green;
+
+        @include media-query($on-laptop) {
+            font-size: 16px;
+        }
+    }
+
     p {
       color: $body;
     }
