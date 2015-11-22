@@ -218,6 +218,7 @@
 
     h2 {
         font-size: 32px;
+        color: $base01;
 
         @include media-query($on-laptop) {
             font-size: 28px;
@@ -226,6 +227,7 @@
 
     h3 {
         font-size: 26px;
+        color: $orange;
 
         @include media-query($on-laptop) {
             font-size: 22px;
@@ -234,9 +236,14 @@
 
     h4 {
         font-size: 20px;
+        color: $blue;
 
         @include media-query($on-laptop) {
             font-size: 18px;
         }
+    }
+
+    p {
+      color: $body;
     }
 }
