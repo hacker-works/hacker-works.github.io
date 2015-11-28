@@ -65,7 +65,7 @@ There are bills to be paid, relationships and families to be taken care of, kids
 
 ### 9. Taste & Aesthetics
 
-The aesthetic quality of out work at [hacker.works](/about) is integral to the usefulness of our work, and on the effect it has on our clients and colleagues and their well-being. 
+The aesthetic quality of our work at [hacker.works](/about) is integral to the usefulness of our work, and on the effect it has on our clients and colleagues and their well-being. 
 
 ### 10. Childlike Minds
 
