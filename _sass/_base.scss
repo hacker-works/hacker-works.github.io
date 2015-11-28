@@ -141,12 +141,26 @@ code {
 
 pre {
     padding: 8px 0px;
-    overflow-x: scroll;
+    overflow-x: hidden;
 
     > code {
         border: 0;
         padding-right: 0;
         padding-left: 0;
+    }
+}
+
+@include media-query($on-laptop) {
+    pre,
+    code {
+        font-size: 8px;
+    }
+}
+
+@include media-query($on-palm) {
+    pre,
+    code {
+        font-size: 6px;
     }
 }
 
