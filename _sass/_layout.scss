@@ -228,6 +228,7 @@
     h3 {
         font-size: 26px;
         color: $orange;
+        margin-top: 2*$spacing-unit; 
 
         @include media-query($on-laptop) {
             font-size: 22px;
@@ -253,6 +254,10 @@
     }
 
     p {
-      color: $body;
+        color: $body;
+
+        em, i {
+            color: $green;
+        }
     }
 }
