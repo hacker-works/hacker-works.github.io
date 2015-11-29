@@ -24,7 +24,21 @@ Our self-direction is a natural inclination. We as hackers enjoy to explore all 
 
 At [hacker.works](/about) we have real *control* over the various aspects of our work -- whether it's deciding what to work on or when to do it, or how to do it.
 
-### 4. Intellectual Honesty
+### 4. Agility
+
+Products and businesses evolve through the collaboration between self-organizing, cross-functional teams. The ability to respond to unpredictability and yet preserve a healthy cadence of work; that requires a form of *agile leadership* in every team, that we associate with the following attributes:
+
+* Ambiguity tolerance;
+* Curiosity;
+* Creativity;
+* Courage;
+* Conviction;
+* Emotional resilience;
+* Critical thinking;
+* Vision;
+* Flexibility.
+
+### 5. Intellectual Honesty
 
 > #### A hacker is being intellectually honest when he or she, knowing the truth, states that truth.
 > ------ a slightly modified Google search [result](https://www.google.bg/webhp?ion=1&espv=2&ie=UTF-8#q=intellectual%20honesty)
@@ -37,18 +51,27 @@ We see *intellectual honesty* as a kernel method for problem solving, that can b
 * References, or earlier work, are acknowledged where possible, and plagiarism is avoided;
 * Addressing the argument instead of attacking the person making the argument.
 
-### 5. Hacker Culture
+### 6. Power of No
+
+> #### When deciding whether to commit to something, if I feel anything less than, “Wow! That would be amazing! Absolutely! Hell yeah!” - then my answer is no. 
+> ------ Derek Sivers, [No more yes. It's either HELL YEAH! or no.](https://sivers.org/hellyeah)
+
+When a hacker says no to most things, he leaves room in his life to really throw himself completely into that rare thing that makes him say *“HELL YEAH!”*
+
+We're all busy. We've all taken on too much. Saying yes to less is the way out.
+
+### 7. Hacker Culture
 
 [hacker.works](/about) is a group of individuals who enjoy the intellectual challenge of creatively overcoming limitations and problems to achieve novel and clever outcomes.
 
-### 6. Craft over Art
+### 8. Craft over Art
 
 > #### "Craftsmanship is built upon strong relationships. Focus on delivering value to your customer over advancing your own self-interests."
 > ------ David H. Hoover, Adewale Oshineye, Apprenticeship Patterns ([DRM free ebook](http://chimera.labs.oreilly.com/books/1234000001813/index.html))
 
 As hacker craftsmen we are primarily building software and products that serve the needs of others, not indulging in artistic expression. We do our best work in ways that place the interests of our clients over our own desire to display skill or pad our resumes, while adhering to the professional standards of competence provided by the software development community.
 
-### 7. Better
+### 9. Better
 
 > #### “...a way to recognize the inadequacies in what you do and to seek out solutions"
 > ------ Atul Gawande, Better
@@ -57,17 +80,17 @@ As hackers we have the need to always be adapting and changing based on the feed
 
 As hackers we are encouraged to explore ideas that remind us of what is possible, that inspire us to think differently and trigger us to explore *better* ways of doing our work. Once a hacker's mind is stretched by a new idea, practice or a *better* tool, it will never return back to its original position. 
 
-### 8. Pragmatism over Dogmas & Idealism
+### 10. Pragmatism over Dogmas & Idealism
 
 At [hacker.works](/about) we're willing to trade off theoretical purity, idealistic dogma and future perfection in favour of getting things done today. 
 
-There are bills to be paid, relationships and families to be taken care of, kids to be fed... Getting rich; building the wealth together; and getting forth the goods and services needed for a becoming existence is what we consider *pragmatic*.
+There are bills to be paid, relationships and families to be taken care of, kids to be fed... Building wealth together; getting rich in the process; and getting forth the goods and services needed for a becoming existence is what we consider *pragmatic*.
 
-### 9. Taste & Aesthetics
+### 11. Taste & Aesthetics
 
 The aesthetic quality of our work at [hacker.works](/about) is integral to the usefulness of our work, and on the effect it has on our clients and colleagues and their well-being. 
 
-### 10. Childlike Minds
+### 12. Childlike Minds
 
 > #### Cooper: "Mankind was born on Earth. It was never meant to die here."
 > ------ Interstellar, Quotes ([permalink](http://www.imdb.com/title/tt0816692/quotes?item=qt2253996))
