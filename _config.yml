@@ -2,7 +2,11 @@
 title: hacker.works website 
 email: hi@hacker.works
 description: > # this means to ignore newlines until "baseurl:"
-
+  We are hacker.works. We combine the hacker mindset with modern approaches for building technology and creating businesses. We build full-stack stable teams that allow us to pursue opportunities in a state of long-term hyper-productivity.
+  
+  We work from first principles to get your ideas from zero to revenue. We reason on fundamental truths, not analogies from previous experiences. We work with a never-ending passion for discovering  better ways to build digital products that solve problems. Our minds are always open to experiment, always trying to accelerate the rate of learning.
+  
+  We come from the startup world and bring a disruptive hacker mindset. We want to transfer that in unlikely environments. We want to inspire the next generation of hackers to live by and engage with the hacker culture. To be playfully clever, aesthetically conscious and to stretch their capabilities in pursuit of excellence.  We’re very proud to invest in our teams.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://hacker.works" # the base hostname & protocol for your site
 twitter_username: npacemo
