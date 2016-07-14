@@ -3,27 +3,36 @@ layout: jobpost
 title: DevOps Hacker
 ---
 
-We are building sophisticated full-stack solutions for scale and long-term maintainability and we’re looking for someone to join our core team of full-stack hackers.
+We are building sophisticated full-stack solutions for scale and long-term maintainability and we’re looking for someone to join our team of full-stack hackers and help us with the DevOps of our systems in productions.
 
 ## Technical requirements:
 
-* Java
-* Spring & Hibernate
-* Javascript
-* Angular or other modern front-end development framework (React.js/Redux)
+* cloud (e.g. Amazon AWS - including EC2, RDS, S3, CloudFront, Beanstalk etc.) 
+* Linux-based systems in production
+* application servers (e.g. Tomcat)
+* web servers (e.g. nginx, Apache)
+* virtualisation (e.g. VirtualBox)
+* containers (e.g. Docker)
+* continuous integration and build systems (e.g. Jenkins)
+* scripting - bash or higher-level language such as Ruby or Python
+* borderline development - Java is a big plus
+* automation tools (e.g. Chef or Puppet)
+* software configuration management (e.g. git)
 
 ## Seniority requirements:
 
 ### You are:
 
+* someone that cares 
 * an amazing troubleshooter
 * able to solve hard problems (the ones that you won’t gonna find on StackOverflow)
-* able and expected to design solutions
-* able and expected to mentor junior and intermediate developers
+* able and expected to engineer and re-engineer processes together with the team
+* able and expected to mentor junior and intermediates
 
 ### You know how to:
 
 * deliver working products and meet deadlines
+* share ideas and get the team of hackers to think together about solving problems
 
 ### You know what:
 
@@ -34,24 +43,21 @@ We are building sophisticated full-stack solutions for scale and long-term maint
 * push back a problematic requirement if you know what the problems with it will be and can explain the same to the non-technical people
 
 ### You have:
-*  good understanding in at least one technology stack of your choice
+
+* broad technical background
 
 ## Some familiarity and understanding of the following tools:
 
-* git 
 * maven
-* jenkins
-* ssh 
+* unit testing
+* integration testing
+* performance testing
+* UI automation
 * logging
-* shell scripting and command line tools
 
 ## Working experience with the any of the following is a big plus:
 
 * Cassandra database
-* Amazon AWS (EC2, RDS, S3, CloudFront, etc.)
-* Linux-based systems in production
-* deploying and troubleshooting of Java application servers (e.g. Tomcat)
 * clusters
-* performance testing
 * big data
 

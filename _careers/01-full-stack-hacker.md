@@ -3,7 +3,7 @@ layout: jobpost
 title: Full-Stack Hacker
 ---
 
-We are building sophisticated full-stack solutions for scale and long-term maintainability and we're looking for someone to join our core team of full-stack hackers.
+We are building sophisticated full-stack solutions for scale and long-term maintainability and we're looking for someone to join our full-stack team of hackers.
 
 ## Technical requirements:
 
@@ -34,6 +34,7 @@ We are building sophisticated full-stack solutions for scale and long-term maint
 * push back a problematic requirement if you know what the problems with it will be and can explain the same to the non-technical people
 
 ### You have:
+
 *  good understanding in at least one technology stack of your choice
 
 ## Some familiarity and understanding of the following tools:
