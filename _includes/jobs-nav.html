@@ -1,0 +1,16 @@
+<nav id="jobs-nav">
+  <h1>Open Positions</h1>
+  
+  <ul>
+  {% for job in site.careers %}
+    {% if page.url == job.url %}
+    <li style="font-weight: bold;"><a href="{{ job.url }}">{{ job.title }}</a></li>
+    {% else %}
+    <li><a href="{{ job.url }}">{{ job.title }}</a></li>
+    {% endif %} 
+  {% endfor %}
+  </ul>
+
+  <a href="/">&lt; back to site</a>
+
+</nav>
