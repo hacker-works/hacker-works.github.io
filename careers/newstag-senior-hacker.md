@@ -1,7 +1,7 @@
 ---
 layout: job
 title: hacker.works careers
-permalink: /newstag-senior-hacker/
+permalink: /careers/newstag-senior-hacker/
 ---
 
 # Newstag Core Team Senior Hacker
