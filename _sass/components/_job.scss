@@ -1,0 +1,52 @@
+.jobs {
+	padding: 0 2rem;
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Headers
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+//Title of the job offering
+	h1 {
+		@extend %page-heading;
+		margin-bottom: 2.8rem;
+	}
+
+	h2 {
+		@extend %jobs-introtext;
+		margin-bottom: 2.8rem;
+	}
+
+	h3 {
+		margin-bottom: 2.5rem;
+		font-family: $inconsolata-font-family;
+		font-size: 2.2rem;
+		font-weight: bold;
+		line-height: 1.3;
+		letter-spacing: -0.1px;
+		color: $azul;
+	}
+
+	footer {
+		margin: 0 -2rem;
+		padding: 6rem 3rem;
+		background-color: #fafafa;
+		font-family: $base-font-family;
+		font-size: 2rem;
+		line-height: 1.8;
+		color: $greyish-brown;
+
+		p {
+			margin-top: 0;
+		}
+	}
+}
+
+.jobs-list {
+	@extend %u-clear-list;
+	@extend %list-green;
+	border-left: 1px solid #979797;
+
+	li {
+		padding-left: 2rem;
+		margin-bottom: 1.3rem;
+	}
+}
