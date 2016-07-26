@@ -8,6 +8,7 @@
 
     {% include header.html %}
 
+
     {% include services.html %}
 
     {% include about.html %}
@@ -18,10 +19,16 @@
 
     {% include subscribe.html %}
 
+    <main class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
     {% include footer.html %}
 
     {% include contact.html %}
-  
+
   </body>
 
 </html>
