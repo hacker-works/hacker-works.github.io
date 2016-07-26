@@ -2,47 +2,8 @@
 layout: redesign
 ---
 <article class="jobs">
+
   {{ content }}
-  <h1>{{ page.title }}</h1>
-
-  {% if page.introtext %}
-    <h2>{{page.introtext}}</h2>
-  {% endif %}
-
-  <section class="jobs-block">
-    <h3>Technical requirements:</h3>
-
-    <ul class="jobs-list">
-      {% for item in page.technical_requirements %}
-        <li>{{ item.requirement }}</li>
-      {% endfor %}
-    </ul>
-  </section>
-
-
-
-  <section class="jobs-block">
-    <h3>Seniority requirements:</h3>
-
-    <ul class="jobs-list">
-      {% for item in page.seniority_requirements %}
-        <li>{{ item.requirement }}</li>
-      {% endfor %}
-    </ul>
-  </section>
-
-
-
-  <section class="jobs-block">
-    <h3>Additional technical requirements:</h3>
-
-    <ul class="jobs-list">
-      {% for item in page.additional_technical_requirements %}
-        <li>{{ item.requirement }}</li>
-      {% endfor %}
-    </ul>
-  </section>
-
 
   <footer>
     <p>Our hackers are supporters of the <a href="http://hacker.works/manifesto">hacker.works.manifesto</a>
