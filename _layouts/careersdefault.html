@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include jobs-header.html %}
+
+    {% include jobs-nav.html %}
+
+    <div class="job-content">
+      {{ content }}
+      
+      {% include job-apply.html %}
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

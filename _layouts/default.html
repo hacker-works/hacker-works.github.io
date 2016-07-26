@@ -4,17 +4,24 @@
   {% include head.html %}
 
   <body>
+    {% include navigation.html %}
 
     {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+    {% include services.html %}
+
+    {% include about.html %}
+
+    {% include careers.html %}
+
+    {% include partners.html %}
+
+    {% include subscribe.html %}
 
     {% include footer.html %}
 
+    {% include contact.html %}
+  
   </body>
 
 </html>
