@@ -1,7 +1,7 @@
 ---
 layout: job
-title: hacker.works careers
-permalink: /careers/full-stack-hacker
+title: Full Stack Hacker
+permalink: /careers/full-stack-hacker/
 ---
 # Full Stack Hacker
 

@@ -1,6 +1,6 @@
 ---
 layout: job
-title: hacker.works careers
+title: Newstag Core Team Senior Hacker
 permalink: /careers/newstag-senior-hacker/
 ---
 

@@ -1,21 +1,13 @@
 <aside class="jobs-nav">
   <nav>
     <ol class="jobs-nav-list">
-      <li>
-        <a href="#">devops hacker</a>
-      </li>
-      <li>
-        <a href="#">front-end hacker</a>
-      </li>
-      <li>
-        <a href="#">full-stack hacker</a>
-      </li>
-      <li>
-        <a href="#">newstag hacker</a>
-      </li>
-      <li>
-        <a href="#">product owner</a>
-      </li>
+      {% for job in site.careers %}
+        {% if page.url == job.url %}
+        <li><a href="{{ job.url }}" class="current">{{ job.title }}</a></li>
+        {% else %}
+        <li><a href="{{ job.url }}">{{ job.title }}</a></li>
+        {% endif %}
+      {% endfor %}
     </ol>
   </nav>
 </aside>

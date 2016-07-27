@@ -1,6 +1,6 @@
 ---
 layout: job
-title:
+title: DevOps Hacker
 permalink: /careers/devops-hacker/
 ---
 # DevOps Hacker

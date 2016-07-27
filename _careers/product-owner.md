@@ -1,7 +1,7 @@
 ---
 layout: job
-title: hacker.works careers
-permalink: /careers/scrum-product-owner
+title: Scrum Product Owner
+permalink: /careers/product-owner/
 ---
 # Scrum Product Owner
 

@@ -1,6 +1,6 @@
 ---
 layout: job
-title: hacker.works careers
+title: Front-End Hacker
 permalink: /careers/front-end-hacker/
 ---
 # Front-End Hacker
