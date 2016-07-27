@@ -24,7 +24,9 @@
 		color: $azul;
 	}
 
-	//List with requirements
+	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+	**  List with requirements
+	\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 	ul {
 		@extend %u-clear-list;
 		@extend %list-green;
@@ -62,6 +64,9 @@
 		}
 	}
 
+	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+	**  Footer
+	\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 	footer {
 		margin: 6rem 0 0;
 		padding: 6rem 3rem;
@@ -73,6 +78,85 @@
 
 		p {
 			margin-top: 0;
+		}
+	}
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Navigation
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.jobs-nav {
+	min-width: 35rem;
+	width: 100%;
+	height: 100%;
+	padding-top: 14rem;
+	position: fixed;
+	top: 0;
+	right: -100%;
+	background-color: $azul;
+	transition: right 0.2s ease;
+
+	&.is-visible {
+		right: 0;
+	}
+
+	@media only screen and (min-width: 640px) {
+		width: 75%;
+	}
+
+	@media only screen and (min-width: 768px) {
+		padding-left: 8rem;
+		width: 25%;
+	}
+
+	@media only screen and (min-width: 1024px) {
+		right: 0 !important;
+	}
+}
+
+//The list
+.jobs-nav-list {
+	display: block;
+	@extend %u-clear-list;
+
+	li {
+		margin-bottom: 1.6rem;
+	}
+
+	a {
+		display: block;
+		font-family: $inconsolata-font-family;
+		font-size: 1.6rem;
+		color: #fff;
+		transition: color .1s linear;
+		text-align: center;
+
+		&:hover, &:focus,
+		&.current {
+			color: $brand-green;
+		}
+
+		@media only screen and (min-width: 768px) {
+			text-align: left;
+		}
+	}
+}
+
+.site-header--mini,
+.jobs {
+	@media only screen and (min-width: 1024px) {
+
+		.wrapper {
+			width: 66.6%;
+			margin-left: 0;
+		}
+	}
+
+	@media only screen and (min-width: 1420px) {
+		.wrapper {
+			width: 80%;
+			padding-right: 20%;
+			margin: 0 auto;
 		}
 	}
 }

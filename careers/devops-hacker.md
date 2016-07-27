@@ -1,11 +1,13 @@
 ---
 layout: job
-title: DevOps Hacker
+title:
+permalink: /careers/devops-hacker/
 ---
+# DevOps Hacker
 
-We are building sophisticated full-stack solutions for scale and long-term maintainability and we’re looking for someone to join our team of full-stack hackers and help us with the DevOps of our systems in productions.
+## We are building sophisticated full-stack solutions for scale and long-term maintainability and we’re looking for someone to join our team of full-stack hackers and help us with the DevOps of our systems in productions.
 
-## Technical requirements:
+### Technical requirements:
 
 * cloud (e.g. Amazon AWS - including EC2, RDS, S3, CloudFront, Beanstalk etc.)
 * Linux-based systems in production
@@ -19,34 +21,27 @@ We are building sophisticated full-stack solutions for scale and long-term maint
 * automation tools (e.g. Chef or Puppet)
 * software configuration management (e.g. git)
 
-## Seniority requirements:
+### Seniority requirements:
 
-### You are:
+* **You are:**
+  * someone that cares
+  * an amazing troubleshooter
+  * able to solve hard problems (the ones that you won’t gonna find on StackOverflow)
+  * able and expected to engineer and re-engineer processes together with the team
+  * able and expected to mentor junior and intermediates
 
-* someone that cares
-* an amazing troubleshooter
-* able to solve hard problems (the ones that you won’t gonna find on StackOverflow)
-* able and expected to engineer and re-engineer processes together with the team
-* able and expected to mentor junior and intermediates
+* **You know how to:**
+  * deliver working products and meet deadlines
+  * share ideas and get the team of hackers to think together about solving problems
+* **You know what:**
+  * corners can be cut and what corners should never be cut
 
-### You know how to:
+* **You can and will:**
+  * push back a problematic requirement if you know what the problems with it will be and can explain the same to the non-technical people
+* **You have:**
+  * broad technical background
 
-* deliver working products and meet deadlines
-* share ideas and get the team of hackers to think together about solving problems
-
-### You know what:
-
-* corners can be cut and what corners should never be cut
-
-### You can and will:
-
-* push back a problematic requirement if you know what the problems with it will be and can explain the same to the non-technical people
-
-### You have:
-
-* broad technical background
-
-## Some familiarity and understanding of the following tools:
+### Some familiarity and understanding of the following tools:
 
 * maven
 * unit testing
@@ -55,7 +50,7 @@ We are building sophisticated full-stack solutions for scale and long-term maint
 * UI automation
 * logging
 
-## Working experience with the any of the following is a big plus:
+### Working experience with the any of the following is a big plus:
 
 * Cassandra database
 * clusters
