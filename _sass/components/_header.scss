@@ -6,27 +6,41 @@
 	background-image: linear-gradient(to left, #00d9bf, #24efa6);
 	width: 100%;
 	height: 100vh;
+	padding-top: 12rem;
+	overflow: hidden;
 
 	h1 {
 		@extend %masthead-text;
 	}
 
 	h2 {
+		display: none;
 		font-family: $base-font-family;
-		font-size: 4.2rem;
+		font-size: 2.8rem;
 		font-weight: 500;
 		line-height: 1.1;
 		letter-spacing: -0.1px;
 		color: $eggshell-blue;
 	}
+
+	.get-in-touch__btn {
+		position: fixed;
+		bottom: 3rem;
+		right: 3rem;
+	}
 }
 
-.rotated-link {
+.rotated-text {
 	display: block;
 	@extend %rotated-text;
-	transform: rotateX(90deg);
-
+	margin: 0;
+	padding-bottom: 2rem;
+	transform: rotateZ(90deg);
+	transform-origin: 30px;
+	border-bottom: 1px solid currentColor;
+	text-transform: uppercase;
 }
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
 **  Mini Header
 **	The header for the job listing
@@ -41,6 +55,7 @@
 		justify-content: space-between;
 		align-items: center;
 	}
+
 	.site-header__burger {
 		flex: 0 0 auto;
 		position: relative;

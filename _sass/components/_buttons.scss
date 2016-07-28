@@ -36,3 +36,19 @@ button {
 	color: #101514;
 	text-transform: uppercase;
 }
+
+.get-in-touch__btn {
+	display: block;
+	width: 5.5rem;
+	height: 5.5rem;
+	line-height: 5.5rem;
+	border-radius: 50%;
+	background: $azul url(/assets/images/svg/paperplane.svg) no-repeat center center;
+	text-align: center;
+	overflow: hidden;
+	box-shadow: 0 2px 32px 0 rgba(0, 0, 0, 0.12);
+
+	img {
+		display: none;
+	}
+}
