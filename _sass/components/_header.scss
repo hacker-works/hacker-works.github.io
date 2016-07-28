@@ -1,3 +1,36 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Main site header
+**	The one with the gradient
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.site-header {
+	background-image: linear-gradient(to left, #00d9bf, #24efa6);
+	width: 100%;
+	height: 100vh;
+
+	h1 {
+		@extend %masthead-text;
+	}
+
+	h2 {
+		font-family: $base-font-family;
+		font-size: 4.2rem;
+		font-weight: 500;
+		line-height: 1.1;
+		letter-spacing: -0.1px;
+		color: $eggshell-blue;
+	}
+}
+
+.rotated-link {
+	display: block;
+	@extend %rotated-text;
+	transform: rotateX(90deg);
+
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Mini Header
+**	The header for the job listing
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .site-header--mini {
 	padding-top: 3.5rem;
 	padding-bottom: 3.5rem;
