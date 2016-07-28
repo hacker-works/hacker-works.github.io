@@ -3,6 +3,7 @@ layout: job
 title: Front-End Hacker
 permalink: /careers/front-end-hacker/
 ---
+
 # Front-End Hacker
 
 ## We are building sophisticated full-stack solutions for scale and long-term maintainability and we're looking for someone to join our full-stack team of hackers and help with front-end development.
@@ -55,3 +56,4 @@ permalink: /careers/front-end-hacker/
 * content management systems
 * SCRUM
 * back-end development
+

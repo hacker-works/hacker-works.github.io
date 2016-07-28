@@ -1,18 +1,19 @@
 ---
 layout: job
-title: Full Stack Hacker
-permalink: /careers/full-stack-hacker/
+title: Back-End Hacker
+permalink: /careers/back-end-hacker/
 ---
-# Full Stack Hacker
 
-## We are building sophisticated full-stack solutions for scale and long-term maintainability and we're looking for someone to join our full-stack team of hackers.
+# Back-End Hacker
+
+## We are building sophisticated full-stack solutions for scale and long-term maintainability and we're looking for someone to join our full-stack team of hackers and help us build well-crafted back-ends.
 
 ### Technical requirements:
 
 * Java
 * Spring & Hibernate
-* Javascript
-* Angular or other modern front-end development framework (React.js/Redux)
+* Relational Databases (e.g. Mysql)
+* NoSQL Databases (e.g. MongoDB, Redis)
 
 ### Seniority requirements:
 
@@ -48,3 +49,4 @@ permalink: /careers/full-stack-hacker/
 * clusters
 * performance testing
 * big data
+

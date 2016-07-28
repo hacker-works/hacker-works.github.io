@@ -59,3 +59,4 @@ permalink: /careers/product-owner/
 
 * business model canvas
 * value proposition canvas
+
