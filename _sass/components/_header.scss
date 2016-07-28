@@ -11,6 +11,7 @@
 
 	h1 {
 		@extend %masthead-text;
+		margin: 0 0 5rem;
 	}
 
 	h2 {
@@ -21,6 +22,10 @@
 		line-height: 1.1;
 		letter-spacing: -0.1px;
 		color: $eggshell-blue;
+
+		@media only screen and (min-width: 640px) {
+			display: block;
+		}
 	}
 
 	.get-in-touch__btn {
@@ -34,11 +39,37 @@
 	display: block;
 	@extend %rotated-text;
 	margin: 0;
+	margin-top: 33.333%;
 	padding-bottom: 2rem;
 	transform: rotateZ(90deg);
 	transform-origin: 30px;
 	border-bottom: 1px solid currentColor;
 	text-transform: uppercase;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  The Wrapper be FLEXING
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.site-header--mini,
+.logo-n-burger {
+
+	.wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.logo-n-burger {
+	width: 100%;
+	position: absolute;
+	top: 3.5rem;
+	left: 0;
+
+	#Job-Offer---Mobile {
+		stroke: white;
+	}
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
@@ -48,13 +79,6 @@
 .site-header--mini {
 	padding-top: 3.5rem;
 	padding-bottom: 3.5rem;
-
-	.wrapper {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-	}
 
 	.site-header__burger {
 		flex: 0 0 auto;
