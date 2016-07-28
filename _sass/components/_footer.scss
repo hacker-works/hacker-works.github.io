@@ -1,7 +1,6 @@
 .site-footer {
 	padding: 6rem 3rem 4.5rem;
 	background-color: $azul;
-	color: #fff;
 	line-height: 1.4;
 	font-family: $inconsolata-font-family;
 	font-size: 1.4rem;
@@ -9,6 +8,7 @@
 
 	p {
 		margin: 0 0 1.5rem;
+		color: #fff;
 	}
 
 	.copyright {

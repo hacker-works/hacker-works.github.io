@@ -482,6 +482,101 @@ body {
   }
 }
 
+.page {
+  margin-bottom: 8rem;
+
+  p {
+    @extend %page-text;
+  }
+
+  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+	**  List with requirements
+	**	MAKE SURE YOU MIX THESE!!
+	\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+  ul {
+		@extend %u-clear-list;
+		@extend %list-green;
+
+		li {
+			margin-bottom: 1.3rem;
+
+			strong {
+				display: inline-block;
+				margin-bottom: 1rem;
+			}
+
+			//The list with the green >
+			& > ul {
+				@extend %u-clear-list;
+				border-left: none;
+
+				& > li {
+					position: relative;
+
+					&::before {
+						content: url(/assets/images/svg/li.svg);
+						float: left;
+						display: block;
+						width: 0.9rem;
+						height: 1.1rem;
+						position: absolute;
+						top: 3px;
+						left: 0;
+					}
+				}
+			}
+		}
+  }
+}
+
+.green-list,
+.page .green-list {
+  @extend %u-clear-list;
+  border-left: none;
+
+  & > li {
+    padding-left: 2rem;
+    position: relative;
+
+    &::before {
+      content: url(/assets/images/svg/li.svg);
+      float: left;
+      display: block;
+      width: 0.9rem;
+      height: 1.1rem;
+      position: absolute;
+      top: 3px;
+      left: 0;
+    }
+  }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Input
+**  General style. CSS Globals, yea!
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+input,
+textarea {
+  display: block;
+  width: 80%;
+  margin: 1.5rem auto 3rem;
+  padding-bottom: 1rem;
+  border: none;
+  border-bottom: 1px solid currentColor;
+  background: transparent;
+  font-size: 1.8rem;
+  color: $black;
+}
+
+textarea {
+  display: inline;
+  height: auto;
+  min-height: 12rem;
+  overflow: visible;
+  overflow-y: none;
+}
+
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
 **  Clearfix
 \~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

@@ -1,0 +1,15 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Headings styles
+**	Total gnarly general css globals. Living the dangerous
+**	life
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.page {
+
+	h1 {
+		@extend %page-heading;
+	}
+
+	h2 {
+		@extend %subheading;
+	}
+}

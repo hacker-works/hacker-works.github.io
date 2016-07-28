@@ -56,6 +56,14 @@ $grey-color-dark:  darken($grey-color, 25%);
 	line-height: 1.1;
 	letter-spacing: -0.2px;
 	color: #fff;
+
+	@media only screen and (min-width: 768px) {
+		font-size: 11rem;
+	}
+
+	@media only screen and (min-width: 1366px) {
+		font-size: 13.6rem;
+	}
 }
 
 %page-heading {
@@ -83,14 +91,17 @@ $grey-color-dark:  darken($grey-color, 25%);
 	font-family: $inconsolata-font-family;
 	font-size: 1.8rem;
 	letter-spacing: -0.1px;
-	color: #ffffff;
+	text-transform: uppercase;
+	color: #fff;
 }
 
 %subheading {
 	font-family: $inconsolata-font-family;
 	font-size: 1.8rem;
+	font-weight: 300;
 	letter-spacing: -0.1px;
 	color: $greyish-brown;
+	opacity: 0.4;
 }
 
 %list-green {

@@ -1,0 +1,39 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Contact form
+**	Styles for all the contact forms
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.hacker-form {
+
+	input {
+
+	}
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Stay in touch
+**	Subscription section
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.stay-in-touch {
+	padding: 6rem 0;
+	background-color: $brand-green;
+	text-align: center;
+
+	input {
+		margin-top: 3.5rem;
+		text-align: center;
+	}
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Get in touch
+**	Subscription section
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.get-in-touch {
+	text-align: left;
+
+	input,
+	textarea {
+		width: 100%;
+		text-align: left;
+	}
+}
