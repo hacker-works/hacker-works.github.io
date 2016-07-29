@@ -96,3 +96,17 @@ button {
 		padding: 0 2rem 0 1rem;
 	}
 }
+
+//Close button
+.btn-close {
+	display: block;
+	height: 5rem;
+	line-height: 5rem;
+	font-family: $inconsolata-font-family;
+	font-size: 4rem;
+	color: #616161;
+
+	span {
+		display: none;
+	}
+}

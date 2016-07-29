@@ -4,8 +4,11 @@
 \~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .hacker-form {
 
-	input {
-
+	input,
+	textarea {
+		font-family: $inconsolata-font-family;
+		font-size: 2.2rem;
+		color: $purplish-brown;
 	}
 }
 
@@ -14,13 +17,28 @@
 **	Subscription section
 \~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .stay-in-touch {
-	padding: 6rem 0;
 	background-color: $brand-green;
 	text-align: center;
+	color: $purplish-brown;
+
+	.wrapper {
+		margin: 0;
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+		position: relative;
+		z-index: 10;
+		background-color: $brand-green;
+	}
 
 	input {
 		margin-top: 3.5rem;
 		text-align: center;
+	}
+
+	.btn-close {
+		position: absolute;
+		top: 3rem;
+		right: 3rem;
 	}
 }
 
