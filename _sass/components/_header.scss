@@ -46,19 +46,15 @@
 }
 
 .rotated-text {
-	display: block;
-	height: 100vh;
-	@extend %rotated-text;
-	margin: 0;
-	margin-top: 33.333%;
-	padding-bottom: 2rem;
-	border-left: 1px solid currentColor;
-	text-transform: uppercase;
+	transform: translateX(-0.5px);
+	margin-top: 15rem;
 
-	span {
-		display: inline-block;
-		transform: rotateZ(90deg);
-		transform-origin: right;
+	@media only screen and (min-width: 640px) {
+		margin-top: 0;
+	}
+
+	@media only screen and (min-width: 768px) {
+		margin-top: 5rem;
 	}
 }
 
