@@ -19,3 +19,17 @@
 		color: $brand-green;
 	}
 }
+
+.home {
+
+	.site-footer {
+			background: $brand-green url(/assets/images/svg/h_w-bg.svg) no-repeat
+			center bottom;
+			background-size: contain;
+
+
+			p {
+				color: $black;
+			}
+	}
+}

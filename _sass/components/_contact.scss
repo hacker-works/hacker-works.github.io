@@ -24,6 +24,7 @@
 	color: $purplish-brown;
 
 	.wrapper {
+		max-width: 64rem;
 		margin: 0 auto;
 		padding-top: 3rem;
 		padding-bottom: 6rem;
@@ -57,14 +58,17 @@
 	left: -150%;
 	z-index: 10;
 	text-align: left;
-	transform: rotateZ(90deg);
+	// transform: rotateZ(90deg);
 	transition: left .4s ease-in-out,
 							transform .4s linear;
 
-
 	&.is-visible {
 		left: 0;
-		transform: rotateZ(0);
+		// transform: rotateZ(0);
+	}
+
+	.wrapper {
+		
 	}
 
 	input,
