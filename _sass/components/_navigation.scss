@@ -1,4 +1,62 @@
 .navigation {
-	display: none;
-	background-color: $brand-green;
+	width: 100vw;
+	height: 100vh;
+	padding-right: 10rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background-color: $brand-black;
+
+	ul {
+		@extend %u-clear-list;
+		padding-right: 3rem;
+		border-right: 1px solid #757575;
+		counter-reset: section -1;
+
+		&:first-child {
+			padding-top: 10rem;
+
+			li {
+				counter-increment: section;
+				padding-right: 3rem;
+				position: relative;
+
+				&::after {
+					content: '0'counter(section)'.';
+					display: block;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					padding-left: 1.6rem;
+					font-family: $inconsolata-font-family;
+					font-size: 3rem;
+					line-height: 2.2;
+					text-align: right;
+					color: $aqua-green;
+				}
+
+				&:first-child {
+					height: 6.6rem;
+				}
+			}
+		}
+	}
+
+	li {
+		padding-right: 3rem;
+		position: relative;
+	}
+
+	a {
+		display: block;
+		padding-right: 3rem;
+		position: relative;
+		font-family: $inconsolata-font-family;
+		font-size: 3rem;
+		line-height: 2.2;
+		text-align: right;
+		color: $aqua-green;
+	}
 }
