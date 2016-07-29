@@ -12,25 +12,10 @@
     </main>
 
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     {% include footer.html %}
 
-    <script>
-      $(document).ready(function(){
-        $('.site-header__burger').on('click', function(){
-          var t = $(this)
-          if (t.hasClass('is-triggered')) {
-            t.removeClass('is-triggered');
-            $('.jobs-nav').removeClass('is-visible')
-          }
-
-          else {
-            t.addClass('is-triggered');
-            $('.jobs-nav').addClass('is-visible')
-          }
-        })
-      });
-    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/scripts/page.js"></script>
 
   </body>
 

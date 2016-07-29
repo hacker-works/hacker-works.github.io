@@ -21,7 +21,6 @@ gems:
   - jekyll-sitemap
   - jekyll-assets
 
-
 collections:
   careers:
     permalink: /careers/:path/

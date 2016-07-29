@@ -101,12 +101,44 @@ button {
 .btn-close {
 	display: block;
 	height: 5rem;
-	line-height: 5rem;
+	padding: 1rem 3rem;
+	border: 1px solid transparent;
 	font-family: $inconsolata-font-family;
 	font-size: 4rem;
+	text-align: right;
 	color: #616161;
+
+	&:focus {
+		animation-name: border-glow;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+		animation-iteration-count: 2;
+	}
 
 	span {
 		display: none;
+	}
+
+	@media only screen and (min-width: 640px) {
+		font-size: 2rem;
+
+		span {
+			display: inline;
+		}
+	}
+}
+
+@keyframes border-glow {
+
+	0% {
+		border-color: rgba(70, 70, 70, 0);
+	}
+
+	50% {
+		border-color: rgba(70, 70, 70, 1);
+	}
+
+	100% {
+		border-color: rgba(70, 70, 70, 0);;
 	}
 }

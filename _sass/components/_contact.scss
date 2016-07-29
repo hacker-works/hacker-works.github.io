@@ -17,17 +17,20 @@
 **	Subscription section
 \~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .stay-in-touch {
+	position: relative;
+	z-index: 10;
 	background-color: $brand-green;
 	text-align: center;
 	color: $purplish-brown;
 
 	.wrapper {
-		margin: 0;
-		padding-top: 6rem;
+		margin: 0 auto;
+		padding-top: 3rem;
 		padding-bottom: 6rem;
 		position: relative;
 		z-index: 10;
 		background-color: $brand-green;
+		overflow-y: auto;
 	}
 
 	input {
@@ -38,7 +41,7 @@
 	.btn-close {
 		position: absolute;
 		top: 3rem;
-		right: 3rem;
+		right: 0;
 	}
 }
 
@@ -47,7 +50,22 @@
 **	Subscription section
 \~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .get-in-touch {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: -150%;
+	z-index: 10;
 	text-align: left;
+	transform: rotateZ(90deg);
+	transition: left .4s ease-in-out,
+							transform .4s linear;
+
+
+	&.is-visible {
+		left: 0;
+		transform: rotateZ(0);
+	}
 
 	input,
 	textarea {
