@@ -71,6 +71,10 @@ $grey-color-dark:  darken($grey-color, 25%);
 	font-size: 4.2rem;
 	line-height: 1.1;
 	color: $purplish-brown;
+
+	@media only screen and (min-width: 640px) {
+		font-size: 6rem;
+	}
 }
 
 %page-heading-minor {
@@ -93,6 +97,10 @@ $grey-color-dark:  darken($grey-color, 25%);
 	letter-spacing: -0.1px;
 	text-transform: uppercase;
 	color: #fff;
+
+	@media only screen and (max-width: 640px) {
+		font-size: 2.2rem;
+	}
 }
 
 %subheading {
@@ -102,6 +110,10 @@ $grey-color-dark:  darken($grey-color, 25%);
 	letter-spacing: -0.1px;
 	color: $greyish-brown;
 	opacity: 0.4;
+
+	@media only screen and (min-width: 640px) {
+		font-size: 2.8rem;
+	}
 }
 
 %list-green {
@@ -110,6 +122,10 @@ $grey-color-dark:  darken($grey-color, 25%);
 	line-height: 1.6;
 	letter-spacing: -0.1px;
 	color: $purplish-brown;
+
+	@media only screen and (min-width: 640px) {
+		font-size: 2rem;
+	}
 }
 
 %page-text {
@@ -117,6 +133,10 @@ $grey-color-dark:  darken($grey-color, 25%);
 	font-size: 1.6rem;
 	line-height: 1.8;
 	color: $greyish-brown;
+
+	@media only screen and (min-width: 640px) {
+		font-size: 2rem;
+	}
 }
 
 %rotated-text {
@@ -129,4 +149,12 @@ $grey-color-dark:  darken($grey-color, 25%);
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+%blockquote {
+	font-family: $inconsolata-font-family;
+	font-size: 1.8rem;
+	line-height: 1.4;
+	letter-spacing: -0.1px;
+	color: $greyish;
 }

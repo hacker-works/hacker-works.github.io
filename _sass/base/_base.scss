@@ -199,6 +199,7 @@ sub {
 
 img {
   border: 0;
+  max-width: 100%;
 }
 
 /**
@@ -460,7 +461,6 @@ html {
 
 }
 
-
 body {
     font-family: $base-font-family;
     font-size: $reset-font-size;
@@ -474,13 +474,25 @@ body {
 .wrapper {
   padding: 0 3rem;
 
+  & > .page {
+    padding-right: 3rem;
+    padding-left: 3rem;
+    border-left: 1px solid #979797;
+  }
+
   @media only screen and (min-width: 768px) {
-    max-width: 80vw;
+    max-width: 90vw;
     margin: 0 auto;
   }
 
-  @media only screen and (min-width: 1024px) {
-    max-width: 1024px;
+  @media only screen and (min-width: 1390px) {
+    max-width: 1366px;
+    padding: 0 5rem;
+
+    & > .page {
+      padding-right: 5rem;
+      padding-left: 5rem;
+    }
   }
 }
 
@@ -518,16 +530,21 @@ body {
 					&::before {
 						content: url(/assets/images/svg/li.svg);
 						float: left;
-						display: block;
-						width: 0.9rem;
-						height: 1.1rem;
-						position: absolute;
-						top: 3px;
-						left: 0;
+						display: inline-block;
+						width: auto;
+						height: 100%;
+            padding-top: 2px;
+            padding-right: 1rem;
+            padding-bottom: 1rem;
 					}
 				}
 			}
 		}
+  }
+
+  blockquote {
+    @extend %blockquote;
+    margin: 0 0 3rem;
   }
 }
 
@@ -543,12 +560,12 @@ body {
     &::before {
       content: url(/assets/images/svg/li.svg);
       float: left;
-      display: block;
-      width: 0.9rem;
-      height: 1.1rem;
-      position: absolute;
-      top: 3px;
-      left: 0;
+      display: inline-block;
+      width: auto;
+      height: 100%;
+      padding-top: 2px;
+      padding-right: 1rem;
+      padding-bottom: 1rem;
     }
   }
 }
