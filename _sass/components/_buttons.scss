@@ -71,6 +71,7 @@ button {
 .btn-cta {
 	@extend %button-link;
 	display: inline-block;
+	margin-top: 3rem;
 	padding-left: 0.7rem;
 	background-color: $azul;
 
@@ -78,6 +79,10 @@ button {
 		content: '>';
 		padding: 0 1.4rem 0 0.7rem;
 	}
+}
+
+p ~ .btn-ctn {
+	margin-bottom: 0;
 }
 
 //Submit something

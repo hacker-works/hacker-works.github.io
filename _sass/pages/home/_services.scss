@@ -8,21 +8,21 @@
   }
   .home-service-texts {
 
-    @media only screen and (min-width: 640px) {
-      padding-right: 16.666%;
-    }
-
     @media only screen and (min-width: 1024px) {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-content: space-between;
+      align-items: baseline;
     }
   }
 
   .home-service__main-txt {
-    flex: 1 1 50%;
-    margin-right: 6rem;
+    flex: 1 1 auto;
+
+    @media only screen and (min-width: 1024px) {
+      margin-right: span(1) - gutter(12);
+    }
   }
 
   .home-service__secondary-txt {
@@ -30,7 +30,8 @@
 
     @media only screen and (min-width: 1024px) {
       display: block;
-      flex: 0 1 50%;
+      flex: 0 1 auto;
+      align-self: flex-end;
 
 
       ul {
@@ -41,7 +42,7 @@
       }
 
       li {
-        flex: 0 0 50%;
+        flex: 0 0 span(5 of 10);
       }
     }
 

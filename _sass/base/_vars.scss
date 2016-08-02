@@ -48,8 +48,16 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
-/* Text styles */
 
+/* SUSY The oddbird */
+$susy: (
+	columns: 12,
+	global-box-sizing: border-box,
+	container: 1440px,
+	// debug: (image: show)
+);
+
+/* Text styles */
 %masthead-text {
 	font-family: $avenir-heavy-font-family;
 	font-size: 6.4rem;

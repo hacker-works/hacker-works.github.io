@@ -5,6 +5,7 @@
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "base/fonts",
+        "base/susy-grids/susy",
         "base/vars",
         "base/base",
         "components/buttons",

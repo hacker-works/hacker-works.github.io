@@ -32,9 +32,7 @@
   margin: 0 0 3rem;
 
   @media only screen and (min-width: 640px) {
-    float: left;
-    width: 33.333%;
-    margin: 0 9rem 25rem 0;
+    @include span(4 of 12);
   }
 
   @media only screen and (min-width: 1024px) {
@@ -44,7 +42,11 @@
 
 .home-about-text {
 
-  @media only screen and (min-width: 1024px) {
-    padding-right: 16.66%;
+  li {
+    margin-left: -4rem;
+  }
+
+  @media only screen and (min-width: 640px) {
+    @include span(7 of 12 last);
   }
 }
