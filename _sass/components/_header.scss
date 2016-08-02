@@ -82,9 +82,10 @@
 
 .logo-n-burger {
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	top: 3.5rem;
 	left: 0;
+	background-image: linear-gradient(to left, #00d9bf, #24efa6);
 
 	#Job-Offer---Mobile {
 		stroke: white;
