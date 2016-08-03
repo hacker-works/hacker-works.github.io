@@ -57,7 +57,7 @@
 	position: fixed;
 	top: 0;
 	left: -150%;
-	z-index: 10;
+	z-index: 100;
 	text-align: left;
 	// transform: rotateZ(90deg);
 	transition: left .4s ease-in-out,
@@ -69,7 +69,7 @@
 	}
 
 	.wrapper {
-		max-width: none;
+		max-width: 80rem;
 	}
 
 	input,

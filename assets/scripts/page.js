@@ -80,4 +80,19 @@ $(document).ready(function(){
 
     return false;
   });
+
+  //Some sticky stuff
+  $(function(){
+    $(window).scroll(function(){
+      var headerHeight = $('.site-header').height();
+
+      if($(this).scrollTop() >= headerHeight){
+          $('.logo-n-burger').addClass('is-airborne');
+      }
+
+      else {
+        $('.logo-n-burger').removeClass('is-airborne')
+      }
+    });
+  });
 });

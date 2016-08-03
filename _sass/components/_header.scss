@@ -62,6 +62,14 @@
 	}
 }
 
+//The buttons
+.site-header__burger--nav {
+
+	&.is-triggered {
+		opacity: 0;
+	}
+}
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
 **  The Wrapper be FLEXING
 \~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -85,11 +93,35 @@
 	position: fixed;
 	top: 3.5rem;
 	left: 0;
-	background-image: linear-gradient(to left, #00d9bf, #24efa6);
+	z-index: 50;
 
 	#Job-Offer---Mobile {
 		stroke: white;
 	}
+
+	&.is-airborne {
+
+		svg {
+			transform: scale(1.25);
+		}
+
+		#Job-Offer---Mobile {
+			stroke: $brand-black;
+		}
+
+		.site-header__logo {
+			opacity: 0;
+		}
+	}
+}
+
+//All the transitions
+.site-header,
+.site-header__logo,
+.site-header__burger--nav,
+svg,
+#Job-Offer---Mobile {
+	transition: all 0.2s ease-in;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
