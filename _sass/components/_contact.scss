@@ -30,7 +30,6 @@
 		padding-bottom: 6rem;
 		position: relative;
 		z-index: 10;
-		background-color: $brand-green;
 		overflow-y: auto;
 	}
 
@@ -59,7 +58,6 @@
 	left: -150%;
 	z-index: 100;
 	text-align: left;
-	// transform: rotateZ(90deg);
 	transition: left .4s ease-in-out,
 							transform .4s linear;
 
@@ -68,13 +66,21 @@
 		// transform: rotateZ(0);
 	}
 
-	.wrapper {
-		max-width: 80rem;
-	}
-
 	input,
 	textarea {
 		width: 100%;
 		text-align: left;
+	}
+
+	@media only screen and (min-width: 1024px) {
+		background: $brand-green url('/assets/images/svg/hi.svg') no-repeat right center;
+		background-size: 50%;
+		
+		.wrapper {
+			@include container();
+		}
+		.hacker-form {
+			width: span(5 of 12);
+		}
 	}
 }
