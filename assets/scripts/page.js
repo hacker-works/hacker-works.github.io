@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  //Jobs navigation
   $('.site-header__burger--jobs').on('click', function(){
     var t = $(this)
     if (t.hasClass('is-triggered')) {
@@ -14,6 +15,7 @@ $(document).ready(function(){
     return false;
   })
 
+  //Show the contact form
   $('.get-in-touch__btn').on('click', function(){
     var t = $(this)
     if (t.hasClass('is-triggered')) {
@@ -81,20 +83,32 @@ $(document).ready(function(){
     return false;
   });
 
-  //Some sticky stuff
   $(function(){
-    $(window).scroll(function(){
-      var headerHeight = $('.site-header').height();
+    var link = $('.navigation').find('a');
 
-      if($(this).scrollTop() >= headerHeight){
-          $('.logo-n-burger').addClass('is-airborne');
-          $('.navigation').addClass('is-dark');
+    link.on('click', function(){
+      if($('.navigation').hasClass('is-visible') && $('.navigation .btn-close').hasClass('is-triggered')) {
+        $('.navigation').removeClass('is-visible');
+        $('.site-header__burger--nav').removeClass('is-triggered');
       }
+    });
 
-      else {
-        $('.logo-n-burger').removeClass('is-airborne')
-        $('.navigation').removeClass('is-dark');
-      }
+
+    //Some sticky stuff
+    $(function(){
+      $(window).scroll(function(){
+        var headerHeight = $('.site-header').height();
+
+        if($(this).scrollTop() >= headerHeight){
+            $('.logo-n-burger').addClass('is-airborne');
+            $('.navigation').addClass('is-dark');
+        }
+
+        else {
+          $('.logo-n-burger').removeClass('is-airborne')
+          $('.navigation').removeClass('is-dark');
+        }
+      });
     });
   });
 });
