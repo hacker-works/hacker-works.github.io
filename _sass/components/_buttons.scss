@@ -112,6 +112,7 @@ p ~ .btn-ctn {
 	font-size: 4rem;
 	text-align: right;
 	color: #616161;
+	cursor: pointer;
 
 	&:focus {
 		animation-name: border-glow;

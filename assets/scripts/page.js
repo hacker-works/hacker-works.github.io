@@ -88,11 +88,28 @@ $(document).ready(function(){
 
       if($(this).scrollTop() >= headerHeight){
           $('.logo-n-burger').addClass('is-airborne');
+          $('.navigation').addClass('is-dark');
       }
 
       else {
         $('.logo-n-burger').removeClass('is-airborne')
+        $('.navigation').removeClass('is-dark');
       }
     });
   });
 });
+
+$(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 700);
+          return false;
+        }
+      }
+    });
+  });
