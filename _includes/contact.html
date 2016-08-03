@@ -5,10 +5,28 @@
     <p>We would love to hear from you.</p>
 
     <form action="https://formspree.io/vladi@hacker.works" method="POST" class="hacker-form">
-      <input type="text" name="_name" placeholder="your name">
-      <input type="email" name="_replyto" placeholder="your email">
-      <input type="text" name="_subject" placeholder="subject">
-      <textarea name="_message" placeholder="your message" rows="3"></textarea>
+
+      <fieldset class="hacker-form__field">
+        <label for="_name">Your name <span>nice to meet you!</span></label>
+        <input type="text" id="_name" name="_name">
+      </fieldset>
+
+
+      <fieldset class="hacker-form__field">
+        <label for="_replyto">Your email <span>so we can get in touch with you</span></label>
+        <input type="email" id="_replyto" name="_replyto">
+      </fieldset>
+
+      <fieldset class="hacker-form__field">
+        <label for="_subject">Your message <span>what do you want to talk about?</span></label>
+        <input type="text" id="_subject" name="_subject">
+      </fieldset>
+
+      <fieldset class="hacker-form__field">
+        <label for="_message">your message</label>
+        <textarea id="_message" name="_message" rows="3"></textarea>
+      </fieldset>
+
       <button type="submit" class="btn-submit">Submit</button>
     </form>
 

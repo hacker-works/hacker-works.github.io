@@ -111,19 +111,41 @@ $(document).ready(function(){
       });
     });
   });
-});
 
-$(function() {
-    $('a[href*="#"]:not([href="#"])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html, body').animate({
-            scrollTop: target.offset().top
-          }, 700);
-          return false;
-        }
+  //Form labels and inputs and shit
+  $(function(){
+    var inputFields = $('.get-in-touch input'),
+        inputArea = $('.get-in-touch textarea');
+
+    $('.get-in-touch').on('focus blur keyup', inputFields, inputArea, function(e){
+      var flyingLabel = $(this).siblings('label')
+          eventType = e.type;
+      console.log(eventType);
+
+      if($(this).val().length >= 0.1) {
+        console.log($(this).val().length)
+        flyingLabel.addClass('hacker-form__label--flying');
+      }
+
+      else {
+        console.log($(this).val())
+        flyingLabel.removeClass('hacker-form__label--flying');
       }
     });
   });
+});
+
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 700);
+        return false;
+      }
+    }
+  });
+});

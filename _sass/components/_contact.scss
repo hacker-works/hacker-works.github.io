@@ -5,10 +5,55 @@
 .hacker-form {
 
 	input,
-	textarea {
+	textarea,
+	label {
 		font-family: $inconsolata-font-family;
-		font-size: 2.2rem;
+		font-size: 1.8rem;
 		color: $purplish-brown;
+
+		@media only screen and (min-width: 640px) {
+			font-size: 2.2rem;
+		}
+	}
+
+	input,
+	textarea {
+		margin: 0;
+	}
+
+	fieldset {
+		position: relative;
+		margin: 3rem 0 1rem;
+	}
+
+	label {
+		position: absolute;
+		top: 3.25rem;
+		left: 0;
+		transition: all 0.2s ease;
+
+		span {
+			opacity: 0.1;
+		}
+
+		&.hacker-form__label--flying {
+			top: 0;
+
+			span {
+				opacity: 0;
+			}
+		}
+	}
+
+	fieldset {
+		position: relative;
+		margin: 3rem 0 0;
+		padding: 0;
+		border: none;
+	}
+
+	button {
+		margin-top: 3rem;
 	}
 }
 
@@ -55,7 +100,8 @@
 	height: 100%;
 	position: fixed;
 	top: 0;
-	left: -150%;
+	left: 0;
+	// left: -150%;
 	z-index: 100;
 	text-align: left;
 	transition: left .4s ease-in-out,
@@ -75,10 +121,11 @@
 	@media only screen and (min-width: 1024px) {
 		background: $brand-green url('/assets/images/svg/hi.svg') no-repeat right center;
 		background-size: 50%;
-		
+
 		.wrapper {
 			@include container();
 		}
+
 		.hacker-form {
 			width: span(5 of 12);
 		}
