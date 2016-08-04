@@ -606,3 +606,14 @@ textarea {
         clear: both;
     }
 }
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Scrollables
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.is-scrollable {
+  overflow-y: scroll !important;
+}
+
+.not-scrollable {
+  overflow: hidden;
+}

@@ -1,6 +1,6 @@
 .navigation {
 	width: 100vw;
-	height: 100vh;
+	min-height: 100%;
 	padding-right: 10rem;
 	position: fixed;
 	top: 0;
@@ -12,6 +12,10 @@
 	&.is-visible {
 		right: 0;
 		transition: right 0.3s ease-in;
+	}
+
+	&.is-scrollable {
+		height: 100%;
 	}
 
 	ul {

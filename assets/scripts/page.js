@@ -26,7 +26,16 @@ $(document).ready(function(){
     else {
       t.addClass('is-triggered');
       $('.btn-close-form').addClass('is-triggered')
-      $('.get-in-touch').addClass('is-visible')
+      $('.get-in-touch').addClass('is-visible');
+
+          windowHeight = window.outerHeight;
+          siteHeader = $('.site-header').outerHeight(false);
+          theForm = $('.get-in-touch')
+          formHeight = theForm.outerHeight();
+      if (formHeight > siteHeader) {
+        $('body').addClass('not-scrollable')
+        $('.get-in-touch').addClass('is-scrollable')
+      }
     }
 
     return false;
@@ -38,6 +47,11 @@ $(document).ready(function(){
       t.removeClass('is-triggered');
       $('.get-in-touch__btn').removeClass('is-triggered')
       $('.get-in-touch').removeClass('is-visible')
+
+      if ($('.get-in-touch').hasClass('is-scrollable')) {
+        $('.get-in-touch').removeClass('is-scrollable');
+        $('body').removeClass('not-scrollable');
+      }
     }
 
     else {
@@ -52,14 +66,31 @@ $(document).ready(function(){
     var t = $(this)
 
     if (t.hasClass('is-triggered')) {
+
+      if ($('.navigation').hasClass('is-scrollable')) {
+        $('.navigation').removeClass('is-scrollable');
+        $('body').removeClass('not-scrollable');
+      }
+
       t.removeClass('is-triggered');
       $('.navigation').removeClass('is-visible')
+
     }
 
     else {
       t.addClass('is-triggered');
       $('.btn-close-nav').addClass('is-triggered')
       $('.navigation').addClass('is-visible')
+
+      siteHeader = $('.site-header').outerHeight(false);
+      navHeight = $('.navigation').outerHeight(false);
+      console.log(siteHeader);
+      console.log(navHeight)
+
+      if (navHeight > siteHeader) {
+        $('body').addClass('not-scrollable')
+        $('.navigation').addClass('is-scrollable')
+      }
     }
 
     return false;
@@ -70,14 +101,19 @@ $(document).ready(function(){
 
     if (t.hasClass('is-triggered')) {
       t.removeClass('is-triggered');
-      $('.site-header__burger').removeClass('is-triggered')
-      $('.navigation').removeClass('is-visible')
+      $('.site-header__burger').removeClass('is-triggered');
+      $('.navigation').removeClass('is-visible');
+
+      if ($('.navigation').hasClass('is-scrollable')) {
+        $('.navigation').removeClass('is-scrollable');
+        $('body').removeClass('not-scrollable');
+      }
     }
 
     else {
       t.addClass('is-triggered');
-      $('.site-header__burger').addClass('is-triggered')
-      $('.navigation').addClass('is-visible')
+      $('.site-header__burger').addClass('is-triggered');
+      $('.navigation').addClass('is-visible');
     }
 
     return false;
@@ -112,7 +148,7 @@ $(document).ready(function(){
     });
   });
 
-  //Form labels and inputs and shit
+  //Form labels and inputs and transitions
   $(function(){
     var inputFields = $('.get-in-touch input'),
         inputArea = $('.get-in-touch textarea');
