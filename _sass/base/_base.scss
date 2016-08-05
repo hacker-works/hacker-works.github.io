@@ -558,13 +558,12 @@ body {
 
     &::before {
       content: url(/assets/images/svg/li.svg);
-      float: left;
       display: inline-block;
       width: auto;
       height: 100%;
-      padding-top: 2px;
-      padding-right: 1rem;
-      padding-bottom: 1rem;
+      position: absolute;
+      top: 0;
+      left: -1rem;
     }
   }
 }
