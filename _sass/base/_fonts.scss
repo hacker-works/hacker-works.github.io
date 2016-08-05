@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'avenir-book';
+  src: url('/assets/fonts/avenir-book.eot)'); /* IE9 Compat Modes */
+  src: url('/assets/fonts/avenir-book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/fonts/avenir-book.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/fonts/avenir-book.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/assets/fonts/avenir-book.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'avenir-medium';
+  src: url('/assets/fonts/avenir-medium.eot'); /* IE9 Compat Modes */
+  src: url('/assets/fonts/avenir-medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/fonts/avenir-medium.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/fonts/avenir-medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/assets/fonts/avenir-medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'avenir-heavy';
+  src: url('/assets/fonts/avenir-heavy.eot'); /* IE9 Compat Modes */
+  src: url('/assets/fonts/avenir-heavy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/fonts/avenir-heavy.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/fonts/avenir-heavy.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/assets/fonts/avenir-heavy.ttf')  format('truetype'), /* Safari, Android, iOS */
+}

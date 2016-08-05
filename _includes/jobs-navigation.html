@@ -1,0 +1,13 @@
+<aside class="jobs-nav">
+  <nav>
+    <ol class="jobs-nav-list">
+      {% for job in site.careers %}
+        {% if page.url == job.url %}
+        <li><a href="{{ job.url }}" class="current">{{ job.title }}</a></li>
+        {% else %}
+        <li><a href="{{ job.url }}">{{ job.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  </nav>
+</aside>

@@ -1,0 +1,15 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  HOME Careers section
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.home-careers {
+  clear: left;
+
+  @media only screen and (min-width: 768px) {
+    .page {
+
+      & > section {
+        width: 66.666%;
+      }
+    }
+  }
+}

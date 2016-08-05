@@ -1,0 +1,37 @@
+<section class="stay-in-touch get-in-touch">
+  <a class="btn-close btn-close-form">X <span>Close</span></a>
+  <div class="wrapper page">
+    <h1>Get in touch</h1>
+    <p>We would love to hear from you.</p>
+
+    <form action="https://formspree.io/hi@hacker.works" method="POST" class="hacker-form">
+      <input type="hidden" name="_subject" value="Get in Touch - " />
+      <input type="hidden" name="_cc" value="vladi@hacker.works" />
+      <input type="hidden" name="_next" value="http://hacker.works#top" />
+
+      <fieldset class="hacker-form__field">
+        <label for="_name">Your name <span>nice to meet you!</span></label>
+        <input type="text" id="_name" name="_name">
+      </fieldset>
+
+
+      <fieldset class="hacker-form__field">
+        <label for="_replyto">Your email <span>so we can get in touch with you</span></label>
+        <input type="email" id="_replyto" name="_replyto">
+      </fieldset>
+
+      <fieldset class="hacker-form__field">
+        <label for="_subject">Subject <span>what do you want to talk about?</span></label>
+        <input type="text" id="_subject" name="_subject">
+      </fieldset>
+
+      <fieldset class="hacker-form__field hacker-form__field--textarea">
+        <label for="_message">your message</label>
+        <textarea id="_message" name="_message"></textarea>
+      </fieldset>
+
+      <button type="submit" class="btn-submit">Submit</button>
+    </form>
+
+  </div>
+</section>

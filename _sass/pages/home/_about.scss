@@ -1,0 +1,56 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  HOME About section
+**  With the lightbulb
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.home-about {
+  overflow: hidden;
+
+  .page {
+    border-left-color: transparent;
+  }
+}
+
+.lightbulb--small {
+  width: 100%;
+}
+
+.lightbulb--large {
+  display: none;
+}
+
+@media only screen and (min-width: 640px) {
+
+  .lightbulb--small {
+    display: none;
+  }
+  .lightbulb--large {
+    display: block;
+  }
+}
+
+.lightbulb {
+  margin: 0 0 3rem;
+
+  @media only screen and (min-width: 640px) {
+    @include span(4 of 12);
+  }
+
+  @media only screen and (min-width: 1024px) {
+    margin-bottom: 3rem;
+  }
+}
+
+.home-about-text {
+
+  ul {
+    transform: translateX(-2rem);
+  }
+
+  .page & li {
+    padding-left: 2rem;
+  }
+
+  @media only screen and (min-width: 640px) {
+    @include span(7 of 12 last);
+  }
+}

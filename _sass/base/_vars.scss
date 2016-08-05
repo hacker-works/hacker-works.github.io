@@ -1,0 +1,181 @@
+// Our variables
+$inconsolata-font-family: 	Inconsolata, monospace;
+$roboto-font-family:      	"Roboto Mono", monospace;
+$base-font-family:        	"avenir-book", verdana, arial, sans-serif;
+$avenir-medium-font-family: "avenir-medium", sans-serif;
+$avenir-heavy-font-family: 	"avenir-heavy", sans-serif;
+$base-font-size:         		1.6rem;
+$reset-font-size:						10px;
+$small-font-size:        		$base-font-size * 0.875;
+$base-line-height:     	   	1.5;
+//remove
+$spacing-unit: 1;
+
+//Brand Colors
+//Got them from the palette of the sketch file
+$brand-green:       rgb(7, 239, 156);
+$brand-green-light: rgb(181, 254, 217);
+$brand-black:       rgb(26, 26, 26);
+$brand-blue-1:      rgb(23, 79, 238);
+$brand-blue-2:      rgb(32, 61, 179);
+$brand-blue-3:      rgb(44, 83, 240);
+
+//Colour palette
+//Got them from zeplin
+$azul:              rgb(44, 83, 240);
+$greenblue:         rgb(33, 216, 148);
+$aqua-green:        rgb(17, 235, 157);
+$purplish-brown:    rgb(51, 49, 50);
+$greeny-blue:       rgb(59, 180, 137);
+$greyish-brown:     rgb(70, 70, 70);
+$greyish:           rgb(163, 163, 163);
+$black:             rgb(26, 26, 26);
+$black-two:         rgb(51, 51, 51);
+$black-three:       rgb(31, 31, 31);
+$white:             rgb(216, 216, 216);
+$white-two:         rgb(243, 243, 243);
+$light-aqua:        rgb(137, 253, 212);
+$eggshell-blue:     rgb(200, 255, 237);
+$greyish-two:       rgb(173, 173, 173);
+$white-three:       rgb(254, 254, 254);
+$white-four:        rgb(239, 239, 239);
+
+$text-color:       $black;
+$background-color: #002b36;
+$brand-color:      #FF8900;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+
+/* SUSY The oddbird */
+$susy: (
+	columns: 12,
+	global-box-sizing: border-box,
+	container: 1440px,
+	// debug: (image: show)
+);
+
+/* Text styles */
+%masthead-text {
+	font-family: $avenir-heavy-font-family;
+	font-size: 6.4rem;
+	line-height: 1.1;
+	letter-spacing: -0.2px;
+	color: #fff;
+
+	@media only screen and (min-width: 768px) {
+		font-size: 11.391rem;
+	}
+
+	@media only screen and (min-width: 1366px) {
+		font-size: 14.4rem;
+	}
+}
+
+%page-heading {
+	font-family: $inconsolata-font-family;
+	font-size: 4.2rem;
+	line-height: 1.1;
+	color: $purplish-brown;
+
+	@media only screen and (min-width: 640px) {
+		font-size: 6rem;
+	}
+}
+
+%page-heading-minor {
+	font-family: $inconsolata-font-family;
+	font-size: 3rem;
+	line-height: 1.7;
+	color: $purplish-brown;
+}
+
+%jobs-introtext {
+	font-family: $base-font-family;
+	font-size: 2.25rem;
+	line-height: 1.5;
+	color: $greyish-brown;
+}
+
+%button-link {
+	font-family: $inconsolata-font-family;
+	font-size: 1.896rem;
+	letter-spacing: -0.1px;
+	text-transform: uppercase;
+	color: #fff;
+
+	@media only screen and (max-width: 640px) {
+		font-size: 2.25rem;
+	}
+}
+
+%subheading {
+	font-family: $inconsolata-font-family;
+	font-size: 1.896rem;
+	font-weight: 300;
+	letter-spacing: -0.1px;
+	color: $greyish-brown;
+	opacity: 0.4;
+
+	@media only screen and (min-width: 640px) {
+		font-size: 2.844rem;
+	}
+}
+
+%list-green {
+	margin: 3.511rem 0;
+	font-family: $inconsolata-font-family;
+	font-size: 1.896rem;
+	line-height: 1.5;
+	letter-spacing: -0.1px;
+	color: $purplish-brown;
+
+	@media only screen and (min-width: 640px) {
+		font-size: 2.25rem;
+	}
+}
+
+%page-text {
+	font-family: $base-font-family;
+	font-size: 1.896rem;
+	line-height: 1.875;
+	color: $greyish-brown;
+
+	@media only screen and (min-width: 640px) {
+		font-size: 2.25rem;
+	}
+}
+
+%rotated-text {
+	font-family: $inconsolata-font-family;
+	font-size: 1.6rem;
+	color: $greeny-blue;
+}
+
+%u-clear-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+%blockquote {
+	font-family: $inconsolata-font-family;
+	font-size: 1.8rem;
+	line-height: 1.4;
+	letter-spacing: -0.1px;
+	color: $greyish;
+
+	@media only screen and (min-width: 640px) {
+		font-size: 2.6rem;
+	}
+
+	@media only screen and (min-width: 1024px) {
+		font-size: 3.2rem;
+	}
+
+	@media only screen and (min-width: 1440px) {
+		font-size: 3.8rem;
+	}
+}

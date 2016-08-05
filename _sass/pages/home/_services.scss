@@ -1,0 +1,58 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  HOME Services section
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.home-services {
+
+  .page {
+    padding-top: 5rem;
+  }
+  .home-service-texts {
+    h2 {
+      margin: 0 0 2.25rem;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: space-between;
+      align-items: baseline;
+    }
+  }
+
+  .home-service__main-txt {
+    flex: 1 1 auto;
+
+    @media only screen and (min-width: 1024px) {
+      margin-right: span(1) - gutter(12);
+    }
+  }
+
+  .home-service__secondary-txt {
+    display: none;
+
+    @media only screen and (min-width: 1024px) {
+      display: block;
+      flex: 0 1 auto;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      li {
+        flex: 0 0 span(5 of 10);
+        margin: 0;
+        padding: 0 1rem 0 0;
+        line-height: 1.875;
+      }
+    }
+
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+}

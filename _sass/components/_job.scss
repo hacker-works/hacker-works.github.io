@@ -1,0 +1,176 @@
+.jobs {
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Headers
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+//Title of the job offering
+	h1 {
+		@extend %page-heading;
+		margin-bottom: 2.8rem;
+	}
+
+	h2 {
+		@extend %jobs-introtext;
+		margin-bottom: 2.844rem;
+	}
+
+	h3 {
+		margin: 3.375rem 0;
+		font-family: $inconsolata-font-family;
+		font-size: 2.25rem;
+		font-weight: bold;
+		line-height: 1.5;
+		letter-spacing: -0.1px;
+		color: $azul;
+	}
+
+	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+	**  List with requirements
+	**	MAKE SURE YOU MIX THESE!!
+	\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+	ul {
+		@extend %u-clear-list;
+		@extend %list-green;
+		border-left: 1px solid #979797;
+
+		li {
+			padding-left: 2.25rem;
+			margin-bottom: 1.5rem;
+
+			strong {
+				display: inline-block;
+				margin-bottom: 1rem;
+			}
+
+			//The list with the green >
+			& > ul {
+				@extend %u-clear-list;
+				border-left: none;
+
+				& > li {
+					position: relative;
+
+					&::before {
+						content: url(/assets/images/svg/li.svg);
+						float: left;
+						display: block;
+						width: 0.9rem;
+						height: 1.1rem;
+						position: absolute;
+						top: 3px;
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+	**  Footer
+	\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+	footer {
+		margin: 6rem 0 0;
+		padding: 6rem 3rem;
+		background-color: #fafafa;
+		font-family: $base-font-family;
+		font-size: 2rem;
+		line-height: 1.8;
+		color: $greyish-brown;
+
+		p {
+			margin-top: 0;
+		}
+	}
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Navigation
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.jobs-nav {
+	min-width: 35rem;
+	width: 100%;
+	height: 100%;
+	padding-top: 14rem;
+	position: fixed;
+	top: 0;
+	right: -150%;
+	background-color: $azul;
+	transition: right 0.2s ease;
+
+	&.is-visible {
+		right: 0;
+	}
+
+	@media only screen and (min-width: 640px) {
+		width: 75%;
+	}
+
+	@media only screen and (min-width: 768px) {
+		padding-left: 8rem;
+		width: 25%;
+	}
+
+	@media only screen and (min-width: 1024px) {
+		right: 0 !important;
+	}
+}
+
+//The list
+.jobs-nav-list {
+	display: block;
+	@extend %u-clear-list;
+
+	li {
+		margin-bottom: 1.6rem;
+	}
+
+	a {
+		display: block;
+		padding-right: 6rem;
+		font-family: $inconsolata-font-family;
+		font-size: 1.6rem;
+		color: #fff;
+		transition: color .1s linear;
+		text-align: right;
+
+		&:hover, &:focus,
+		&.current {
+			color: $brand-green;
+		}
+
+		&.current {
+
+			&::before {
+				content: "/ "
+			}
+		}
+
+		@media only screen and (min-width: 640px) {
+			text-align: center;
+			padding: 0;
+		}
+
+		@media only screen and (min-width: 768px) {
+			text-align: left;
+		}
+	}
+}
+
+.site-header--mini,
+.jobs {
+	@media only screen and (min-width: 1024px) {
+
+		.wrapper {
+			width: 66.6%;
+			margin-left: 0;
+		}
+	}
+
+	@media only screen and (min-width: 1420px) {
+		.wrapper {
+			width: 80%;
+			padding-right: 20%;
+			margin: 0 auto;
+		}
+	}
+}

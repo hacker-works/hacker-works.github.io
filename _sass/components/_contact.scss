@@ -1,0 +1,180 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Contact form
+**	Styles for all the contact forms
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.hacker-form {
+
+	input,
+	textarea,
+	label {
+		font-family: $inconsolata-font-family;
+		font-size: 1.5rem;
+		color: $purplish-brown;
+
+		@media only screen and (min-width: 640px) {
+			font-size: 2.2rem;
+		}
+	}
+
+	input,
+	textarea {
+		margin: 0;
+		padding-bottom: 0.667rem;
+		outline: none;
+	}
+
+	input {
+		line-height: 1.5;
+	}
+
+	fieldset {
+		position: relative;
+		margin: 3rem 0 1rem;
+	}
+
+	label {
+		position: absolute;
+		top: 3.75rem;
+		left: 0;
+		transition: all 0.1s ease;
+		color: $brand-black;
+
+		span {
+			opacity: 0.1;
+			font-size: 1.5rem;
+
+			@media only screen and (min-width: 768px) {
+				font-size: inherit;
+			}
+		}
+
+		&.hacker-form__label--flying {
+			top: 0;
+
+			span {
+				opacity: 0;
+			}
+		}
+	}
+
+	button {
+		margin-top: 3rem;
+	}
+}
+
+
+.hacker-form__field {
+	position: relative;
+	margin: 3rem 0 0;
+	padding: 0;
+	border: none;
+
+	&:first-of-type {
+		margin-top: 0;
+	}
+
+	textarea {
+		border: 1px solid;
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-left-color: transparent;
+		transition: all 0.2s ease;
+
+		&:focus {
+			padding: gutters(12);
+			border-color: currentColor;
+			min-height: 16rem;
+		}
+	}
+}
+
+.hacker-form__field--textarea {
+	label {
+		position: static;
+	}
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Stay in touch
+**	Subscription section
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.stay-in-touch {
+	position: relative;
+	z-index: 10;
+	background-color: $brand-green;
+	text-align: center;
+	color: $purplish-brown;
+
+	.wrapper {
+		max-width: 64rem;
+		margin: 0 auto;
+		padding-top: 3rem;
+		padding-bottom: 6rem;
+		position: relative;
+		z-index: 10;
+		overflow-y: auto;
+	}
+
+	input {
+		margin: 3.5rem auto 0;
+		text-align: center;
+	}
+
+	.btn-close {
+		position: absolute;
+		top: 3rem;
+		right: 0;
+		z-index: 15;
+		font-size: 2rem;
+	}
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Get in touch
+**	Subscription section
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.get-in-touch {
+	width: 100%;
+	min-height: 100%;
+	position: fixed;
+	top: 0;
+	left: -150%;
+	// left: -150%;
+	z-index: 100;
+	text-align: left;
+	transition: left .4s ease-in-out,
+							transform .4s linear;
+
+	&.is-visible {
+		left: 0;
+		// transform: rotateZ(0);
+	}
+
+	&.is-scrollable {
+		height: 100%;
+	}
+
+	input,
+	textarea {
+		width: 100%;
+		text-align: left;
+	}
+
+	textarea {
+		min-height: 0;
+		height: 6rem;
+	}
+
+	@media only screen and (min-width: 1024px) {
+		background: $brand-green url('/assets/images/svg/hi.svg') no-repeat right center;
+		background-size: 50%;
+
+		.wrapper {
+			@include container();
+		}
+
+		.hacker-form {
+			width: span(5 of 12);
+		}
+	}
+}

@@ -1,0 +1,216 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Main site header
+**	The one with the gradient
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.site-header {
+	background-image: linear-gradient(to left, #00d9bf, #24efa6);
+	width: 100%;
+	height: 100vh;
+	padding-top: 12rem;
+	overflow: hidden;
+
+	h1 {
+		@extend %masthead-text;
+		margin: 0 0 5rem;
+	}
+
+	h2 {
+		display: none;
+		margin: 0;
+		font-family: $base-font-family;
+		font-size: 2.844rem;
+		font-weight: 500;
+		line-height: 1.1;
+		letter-spacing: -0.1px;
+		color: $eggshell-blue;
+
+		@media only screen and (min-width: 640px) {
+			display: block;
+		}
+
+		@media only screen and (min-width: 768px) {
+			font-size: 2.844rem;
+		}
+
+		@media only screen and (min-width: 1366px) {
+			font-size: 4.267rem;
+		}
+
+	}
+
+	.get-in-touch__btn {
+		position: fixed;
+		bottom: 3.375rem;
+		right: 3rem;
+		z-index: 5;
+	}
+
+	.wrapper::after {
+		display: none;
+	}
+}
+
+.rotated-text {
+	transform: translateX(-0.5px);
+	margin-top: 15rem;
+
+	@media only screen and (min-width: 640px) {
+		margin-top: 0;
+	}
+
+	@media only screen and (min-width: 768px) {
+		margin-top: 5rem;
+	}
+}
+
+//The buttons
+.site-header__burger--nav {
+
+	&.is-triggered {
+		opacity: 0;
+	}
+
+	@media only screen and (min-width: 1024px) {
+		display: none;
+	}
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  The Wrapper be FLEXING
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.site-header--mini,
+.logo-n-burger {
+
+	.wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		&::after {
+			display: none;
+		}
+	}
+}
+
+.logo-n-burger {
+	width: 100%;
+	position: fixed;
+	top: 3.375rem;
+	left: 0;
+	z-index: 50;
+
+	#Job-Offer---Mobile {
+		stroke: white;
+	}
+
+	&.is-airborne {
+
+		svg {
+			transform: scale(1.25);
+		}
+
+		#Job-Offer---Mobile {
+			stroke: $brand-black;
+		}
+
+		.site-header__logo {
+			opacity: 0;
+		}
+	}
+}
+
+//All the transitions
+.site-header,
+.site-header__logo,
+.site-header__burger--nav,
+svg,
+#Job-Offer---Mobile {
+	transition: all 0.2s ease-in;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Mini Header
+**	The header for the job listing
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.site-header--mini {
+	padding-top: 3.375rem;
+	padding-bottom: 3.375rem;
+
+	.site-header__burger {
+		flex: 0 0 auto;
+		position: relative;
+		transform: translateX(-2px);
+
+		&::before {
+			content: 'Open positions';
+			width: 18rem;
+			padding-right: 2rem;
+			position: absolute;
+			top: 0;
+			right: 100%;
+			font-family: $inconsolata-font-family;
+			line-height: 1;
+			font-size: 1.896rem;
+			text-transform: uppercase;
+			text-align: right;
+			color: $azul;
+			opacity: 0;
+			transition: opacity 0.2s ease;
+
+			@media only screen and (min-width: 640px) {
+				opacity: 1;
+			}
+		}
+
+		&.is-triggered {
+			position: relative;
+			z-index: 1000;
+
+			&::before {
+				color: #fff;
+				opacity: 1;
+			}
+
+			#Job-Offer---Mobile {
+				stroke: #fff;
+			}
+		}
+
+		svg {
+			transition: stroke 2s ease;
+		}
+
+		@media only screen and (min-width: 1024px) {
+			display: none;
+		}
+	}
+
+	.logo-normal {
+		height: 0;
+		opacity: 0;
+	}
+
+	@media only screen and (min-width: 768px) {
+
+		.logo-mobile {
+			height: 0;
+			opacity: 0;
+		}
+
+		.logo-normal {
+			height: auto;
+			opacity: 1;
+		}
+	}
+}
+
+.manifesto {
+
+	.site-header__burger {
+
+		&::before {
+			display: none;
+		}
+	}
+}

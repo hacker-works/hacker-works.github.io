@@ -1,0 +1,35 @@
+.site-footer {
+	padding: 6rem 3rem 4.5rem;
+	background-color: $azul;
+	line-height: 1.4;
+	font-family: $inconsolata-font-family;
+	font-size: 1.4rem;
+	text-align: center;
+
+	p {
+		margin: 0 0 1.5rem;
+		color: #fff;
+	}
+
+	.copyright {
+		margin-top: 1.6rem;
+	}
+
+	a {
+		color: $brand-green;
+	}
+}
+
+.home {
+
+	.site-footer {
+			background: $brand-green url(/assets/images/svg/h_w-bg.svg) no-repeat
+			center bottom;
+			background-size: contain;
+
+
+			p {
+				color: $black;
+			}
+	}
+}

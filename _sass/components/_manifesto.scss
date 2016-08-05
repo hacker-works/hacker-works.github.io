@@ -1,0 +1,56 @@
+.manifesto {
+	counter-reset: values;
+
+	ol {
+		@extend %u-clear-list;
+
+		li {
+			padding-left: 3.375rem;
+			position: relative;
+
+			&::before {
+				content: counter(values);
+				counter-increment: values;
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: $brand-green;
+			}
+		}
+
+		a {
+			color: $brand-black;
+
+			&:hover {
+				color: $black;
+			}
+		}
+	}
+
+	h4 {
+		margin: 1rem 0 0.667rem;
+	}
+
+	.jobs-nav {
+		background-image: linear-gradient(to left, #00d9bf, #24efa6);
+
+		li {
+
+			&::before {
+				content: '';
+			}
+		}
+	}
+
+	.jobs-application-button {
+		background-color: $brand-blue-1;
+		color: #fff;
+		transform: scale(0.5);
+		transform-origin: bottom right;
+
+		@media only screen and (min-width: 640px) {
+			transform: none;
+		}
+	}
+}
