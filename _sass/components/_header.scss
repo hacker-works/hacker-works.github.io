@@ -204,3 +204,13 @@ svg,
 		}
 	}
 }
+
+.manifesto {
+
+	.site-header__burger {
+
+		&::before {
+			display: none;
+		}
+	}
+}

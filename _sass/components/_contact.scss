@@ -19,6 +19,12 @@
 	input,
 	textarea {
 		margin: 0;
+		padding-bottom: 0.667rem;
+		outline: none;
+	}
+
+	input {
+		line-height: 1.5;
 	}
 
 	fieldset {
@@ -28,13 +34,18 @@
 
 	label {
 		position: absolute;
-		top: 3.25rem;
+		top: 3.75rem;
 		left: 0;
 		transition: all 0.1s ease;
+		color: $brand-black;
 
 		span {
 			opacity: 0.1;
 			font-size: 1.5rem;
+
+			@media only screen and (min-width: 768px) {
+				font-size: inherit;
+			}
 		}
 
 		&.hacker-form__label--flying {

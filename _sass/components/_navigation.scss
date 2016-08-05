@@ -11,7 +11,7 @@
 
 	&.is-visible {
 		right: 0;
-		transition: right 0.3s ease-in;
+		transition: right .4s ease-in-out;
 	}
 
 	&.is-scrollable {
@@ -93,20 +93,19 @@
 		height: auto;
 		padding: 5rem;
 		padding-right: 3rem;
+		padding-top: 0;
+		margin-top: 3.375rem;
 		top: 0;
 		right: 2rem;
 		background-color: transparent;
 		transform: scale(0.5);
 		transform-origin: top right;
-		transition: transform 0.3s ease-out;
-
-		&.is-dark {
-
-		}
+		transition: transform 0.1s ease-in;
 
 		&:hover {
 			transform: scale(1);
-			transition: transform 0.3s ease-in;
+			transition: transform 0.1s ease-in,
+									padding 0.1s ease;
 		}
 
 		.wrapper {
