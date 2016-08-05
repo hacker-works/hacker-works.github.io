@@ -7,6 +7,9 @@
     padding-top: 5rem;
   }
   .home-service-texts {
+    h2 {
+      margin: 0 0 2.25rem;
+    }
 
     @media only screen and (min-width: 1024px) {
       display: flex;
@@ -31,8 +34,6 @@
     @media only screen and (min-width: 1024px) {
       display: block;
       flex: 0 1 auto;
-      align-self: flex-end;
-
 
       ul {
         display: flex;
@@ -43,6 +44,8 @@
 
       li {
         flex: 0 0 span(5 of 10);
+        margin: 0;
+        line-height: 1.875;
       }
     }
 

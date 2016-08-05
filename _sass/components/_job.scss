@@ -11,15 +11,15 @@
 
 	h2 {
 		@extend %jobs-introtext;
-		margin-bottom: 2.8rem;
+		margin-bottom: 2.844rem;
 	}
 
 	h3 {
-		margin-bottom: 2.5rem;
+		margin: 3.375rem 0;
 		font-family: $inconsolata-font-family;
-		font-size: 2.2rem;
+		font-size: 2.25rem;
 		font-weight: bold;
-		line-height: 1.3;
+		line-height: 1.5;
 		letter-spacing: -0.1px;
 		color: $azul;
 	}
@@ -35,7 +35,7 @@
 
 		li {
 			padding-left: 2rem;
-			margin-bottom: 1.3rem;
+			margin-bottom: 1.5rem;
 
 			strong {
 				display: inline-block;
