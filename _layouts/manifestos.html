@@ -5,12 +5,47 @@
 
   <body class="manifesto">
 
-    {% include header-mini.html %}
+    {% include header-manifesto.html %}
+
+    <!-- {% include navigation.html %} -->
 
     <main>
-      {{ content }}
+      <article class="manifesto-content">
+        <header class="manifesto-header">
+          <a href="https://goo.gl/forms/FHBQsOeNSKgInYeC2" class="jobs-application-button" target="_blank">Sign the manifesto &gt;</a>
+          <div class="wrapper">
+            <h1>
+              We are an aspiring team of hackers. We uncover the hacker mindset for companies and people so they can overcome workplace and industry constraints. We build communities and work environments that incubate impactful digital products.
+            </h1>
+          </div>
+        </header>
+        <section class="manifesto-values">
+          <div class="wrapper">
+            <h2>Through this work we have come to value:</h2>
+            <ul>
+              <li>Not only honing the skills and craftsmanship for building well-crafted software but also cultivating <a href="#sensibilities">#sensibilities</a></li>
+              <li>Not only continuously changing and steadily adding value but also nurturing individual <a href="#motivation">#motivations</a> to ensure continuity of teams</li>
+              <li>Not only delivering solutions but also reasoning from <a href="#reasoning-from-the-first-principles">#first principles</a> to creatively overcome limitations and achieve novel and clever outcomes</li>
+              <li>Not only partnering and collaborating with the client but also focusing on <a href="#outcomes-amp-impact">#outcomes</a> and taking responsibility for <a href="#outcomes-amp-impact">#impact</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="manifesto-principles">
+          <div class="wrapper">
+            {{ content }}
+          </div>
+        </section>
+        <footer>
+          <div class="wrapper">
+            <p>Our hackers are supporters of the <a href="http://hacker.works/manifesto">hacker.works manifesto</a>
+            </p>
+            <p>If you feel confident with at least half of the technical and seniority requirements and you recognize yourself in even just a few of the values from the <a href="http://hacker.works/">hacker.works</a> manifesto, please don't hesitate to apply.</p>
+          </div>
+        </footer>
+      </article>
     </main>
 
+    {% include subscribe.html %}
 
     {% include footer.html %}
 
@@ -24,7 +59,6 @@
 
       ga('create', 'UA-79952132-1', 'auto');
       ga('send', 'pageview');
-
     </script>
   </body>
 
