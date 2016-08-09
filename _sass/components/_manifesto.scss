@@ -5,8 +5,9 @@
 		@extend %u-clear-list;
 
 		li {
-			padding-left: 3.375rem;
-			position: relative;
+			font-size: 2rem;
+			line-height: 1.7;
+			color: $purplish-brown;
 
 			&::before {
 				content: counter(values);
@@ -28,29 +29,63 @@
 		}
 	}
 
-	h4 {
+	h3 {
 		margin: 1rem 0 0.667rem;
+		color: $purplish-brown;
+		font-size: 4.2rem;
 	}
+}
 
-	.jobs-nav {
-		background-image: linear-gradient(to left, #00d9bf, #24efa6);
+//Styling the headers
+//Black'n'Green
+.site-header--mini {
+	background-color: $black;
+}
 
-		li {
+.manifesto-header {
+	background-color: $black;
 
-			&::before {
-				content: '';
-			}
-		}
-	}
-
-	.jobs-application-button {
-		background-color: $brand-blue-1;
+	h1 {
+		line-height: 2;
+		font-size: 2rem;
+		font-weight: 300;
+		letter-spacing: -0.1px;
 		color: #fff;
-		transform: scale(0.5);
-		transform-origin: bottom right;
-
-		@media only screen and (min-width: 640px) {
-			transform: none;
-		}
 	}
+}
+
+//The values of hacker.works
+.manifesto-values {
+	background-image: linear-gradient(to left, #00d9bf, #24efa6);
+	font-family: $inconsolata-font-family;
+
+	h2 {
+		font-size: 3.2rem;
+		font-weight: 500;
+		line-height: 1.2;
+		letter-spacing: -0.1px;
+		color: $black-three;
+	}
+
+	//the value itself
+	li {
+		font-size: 2rem;
+		line-height: 1.7;
+		letter-spacing: -0.2px;
+		color: #1f694e;
+	}
+}
+
+//The principles of hacker.works
+.manifesto-principles {
+
+	h2 {
+		font-size: 2.2rem;
+		font-weight: 500;
+		line-height: 1.6;
+		letter-spacing: -0.1px;
+		color: $aqua-green;
+	}
+
+
 }
