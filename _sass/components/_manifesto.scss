@@ -1,41 +1,3 @@
-.manifesto {
-	counter-reset: values;
-
-	ol {
-		@extend %u-clear-list;
-
-		li {
-			font-size: 2rem;
-			line-height: 1.7;
-			color: $purplish-brown;
-
-			&::before {
-				content: counter(values);
-				counter-increment: values;
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				color: $brand-green;
-			}
-		}
-
-		a {
-			color: $brand-black;
-
-			&:hover {
-				color: $black;
-			}
-		}
-	}
-
-	h3 {
-		margin: 1rem 0 0.667rem;
-		color: $purplish-brown;
-		font-size: 4.2rem;
-	}
-}
-
 //Styling the headers
 //Black'n'Green
 .site-header--mini {
@@ -44,8 +6,10 @@
 
 .manifesto-header {
 	background-color: $black;
+	padding: 0 0 6.4rem;
 
 	h1 {
+		margin: 0;
 		line-height: 2;
 		font-size: 2rem;
 		font-weight: 300;
@@ -54,12 +18,38 @@
 	}
 }
 
+.manifesto {
+	counter-reset: values;
+
+	.site-footer {
+		background-color: $brand-green;
+
+		p {
+			color: $brand-black;
+		}
+	}
+
+	figure {
+		margin: 3.375rem 0;
+	}
+}
+
+.manifesto-content {
+
+	p {
+		padding-left: gutters(4);
+		border-left: 1px solid #757575;
+	}
+}
+
 //The values of hacker.works
 .manifesto-values {
+	padding: 4.267rem 0 3.375rem;
 	background-image: linear-gradient(to left, #00d9bf, #24efa6);
-	font-family: $inconsolata-font-family;
 
 	h2 {
+		margin: 0;
+		margin-bottom: 3.6rem;
 		font-size: 3.2rem;
 		font-weight: 500;
 		line-height: 1.2;
@@ -67,10 +57,19 @@
 		color: $black-three;
 	}
 
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
 	//the value itself
 	li {
+		margin-bottom: 2.844rem;
+		padding-left: 2rem;
+		background: url(/assets/images/svg/gt.svg) no-repeat 0 0.667rem;
+		font-family: $inconsolata-font-family;
 		font-size: 2rem;
-		line-height: 1.7;
 		letter-spacing: -0.2px;
 		color: #1f694e;
 	}
@@ -80,12 +79,62 @@
 .manifesto-principles {
 
 	h2 {
-		font-size: 2.2rem;
+		font-size: 2.25rem;
 		font-weight: 500;
-		line-height: 1.6;
-		letter-spacing: -0.1px;
 		color: $aqua-green;
 	}
 
+	h3 {
+		margin: 0.444em 0;
+		font-family: $inconsolata-font-family;
+		font-size: 4.2rem;
+		line-height: 1.1;
+		color: $purplish-brown;
+	}
 
+	p {
+		margin: 0;
+		padding-bottom: 1.896rem;
+		position: relative;
+		font-size: 1.896rem;
+		color: $purplish-brown;
+
+		&::before {
+			content: counter(values);
+			counter-increment: values;
+			display: block;
+			padding-bottom: 1rem;
+			line-height: 1;
+			font-family: $inconsolata-font-family;
+			font-size: 3.375rem;
+			color: $brand-green;
+		}
+
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+	}
+}
+
+.manifesto-principles__first {
+	margin-top: 3.375rem;
+	padding: 5.063rem 0;
+	background-color: $azul;
+	box-shadow: 0 2px 13px 0 rgba(5, 34, 37, 0.19);
+
+	h3, p {
+		color: #fff;
+	}
+
+	h3 {
+		margin: 0 0 5.063rem;
+	}
+
+	p {
+		border-color: #fff;
+
+		&:before {
+			color: #fff;
+		}
+	}
 }
