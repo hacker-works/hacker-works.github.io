@@ -5,8 +5,10 @@
 }
 
 .manifesto-header {
-	background-color: $black;
 	padding: 0 0 6.4rem;
+	position: relative;
+	background: $black url(/assets/images/svg/characters.svg) repeat-x 0 calc(100% + 7px);
+	overflow: hidden;
 
 	h1 {
 		margin: 0;
@@ -15,6 +17,13 @@
 		font-weight: 300;
 		letter-spacing: -0.1px;
 		color: #fff;
+	}
+
+	//controlling the backgounds
+	.manifesto-backgrounds {
+		display: none;
+		bottom: -3.25rem;
+		left: 0;
 	}
 }
 
@@ -31,6 +40,11 @@
 
 	figure {
 		margin: 3.375rem 0;
+	}
+
+	.manifesto-backgrounds {
+		margin: 0;
+		padding: 0;
 	}
 }
 
@@ -77,8 +91,11 @@
 
 //The principles of hacker.works
 .manifesto-principles {
+	padding-top: 5.063rem;
+	background: url(/assets/images/svg/characters.svg) repeat-x 0 -0.3%;
 
 	h2 {
+		margin-top: 0;
 		font-size: 2.25rem;
 		font-weight: 500;
 		color: $aqua-green;
@@ -119,6 +136,7 @@
 .manifesto-principles__first {
 	margin-top: 3.375rem;
 	padding: 5.063rem 0;
+	position: relative;
 	background-color: $azul;
 	box-shadow: 0 2px 13px 0 rgba(5, 34, 37, 0.19);
 
@@ -136,5 +154,41 @@
 		&:before {
 			color: #fff;
 		}
+	}
+
+	.manifesto-backgrounds {
+		top: -1.75rem;
+		left: 0;
+		text-align: left;
+	}
+}
+
+//The backgrounds with the lots of characters
+.manifesto-backgrounds {
+	min-width: 100%;
+	min-height: 60px;
+	position: absolute;
+	text-align: center;
+	overflow: hidden;
+
+	img {
+		display: inline-block;
+		max-width: none;
+	}
+
+	//Small and large resolution images
+	.manifesto-background--large {
+		display: none;
+	}
+}
+
+.manifesto-backgrounds__center {
+	position: relative;
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 }
