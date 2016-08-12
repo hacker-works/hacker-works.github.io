@@ -92,7 +92,7 @@
 //The principles of hacker.works
 .manifesto-principles {
 	padding-top: 5.063rem;
-	background: url(/assets/images/svg/characters.svg) repeat-x 0 -0.3%;
+	background: url(/assets/images/svg/characters.svg) repeat-x 0 -1.9rem;
 
 	h2 {
 		margin-top: 0;
@@ -133,6 +133,23 @@
 	}
 }
 
+.manifesto-principles__first-container {
+	padding: 3rem 0;
+	position: relative;
+	overflow: hidden;
+
+	//Dealing with the funky characters
+	.manifesto-backgrounds--top {
+		top: 4.25rem;
+		left: 0;
+	}
+
+	.manifesto-backgrounds--bottom {
+		bottom: -1.75rem;
+		left: 0;
+	}
+}
+
 .manifesto-principles__first {
 	margin-top: 3.375rem;
 	padding: 5.063rem 0;
@@ -154,12 +171,6 @@
 		&:before {
 			color: #fff;
 		}
-	}
-
-	.manifesto-backgrounds {
-		top: -1.75rem;
-		left: 0;
-		text-align: left;
 	}
 }
 
