@@ -1,7 +1,36 @@
 //Styling the headers
 //Black'n'Green
-.site-header--mini {
+.site-header--manifesto {
 	background-color: $black;
+
+	@media only screen and (min-width: 1024px) {
+		padding-top: 17.086rem;
+
+		.wrapper {
+			@include container();
+			width: auto;
+		  padding: 0 5rem;
+
+			&::after {
+				display: none;
+			}
+
+			@media only screen and (min-width: 1025px) {
+				max-width: 75%;
+			}
+		}
+	}
+
+	//The back to the site link
+	.back-to-site {
+
+		@media only screen and (min-width: 1200px) {
+			position: absolute;
+			top: calc(11.391rem - 6.4rem);
+			right: 6.4rem;
+			font-size: 1.896rem;
+		}
+	}
 }
 
 .manifesto-header {
@@ -17,6 +46,24 @@
 		font-weight: 300;
 		letter-spacing: -0.1px;
 		color: #fff;
+
+		@media only screen and (min-width: 1200px) {
+			font-size: 2.844rem;
+		}
+	}
+
+	@media only screen and (min-width: 1200px) {
+		padding-bottom: 0;
+		background-image: none;
+
+		h1 {
+			max-width: span(8);
+			padding-bottom: 70rem;
+			padding-left: 4.6rem;
+			border-left: 1px solid rgba(117,117,117, 0.3);
+			position: relative;
+			z-index: 5;
+		}
 	}
 
 	//controlling the backgounds
@@ -26,6 +73,7 @@
 		left: 0;
 	}
 }
+
 
 .manifesto {
 	counter-reset: values;
@@ -46,13 +94,48 @@
 		margin: 0;
 		padding: 0;
 	}
+
+	@media only screen and (min-width: 1200px) {
+
+		.logo-normal {
+			height: 128px;
+			margin-bottom: 13rem;
+		}
+	}
 }
 
 .manifesto-content {
 
 	p {
 		padding-left: gutters(4);
-		border-left: 1px solid #757575;
+		border-left: 1px solid rgba(117,117,117, 0.3);
+	}
+}
+
+//The sensibilities
+.manifesto-principles__sensibilities {
+
+	.content {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	@media only screen and (min-width: 1024px) {
+
+		.content {
+			flex-direction: row-reverse;
+			justify-content: space-between;
+		}
+
+		.quotes {
+			flex: 0 0 span(5);
+		}
+
+		figure {
+			flex: 0 0 span(6);
+			margin: 0 0 0 span(1);
+			transform: translateX(span(1));
+		}
 	}
 }
 
@@ -60,6 +143,21 @@
 .manifesto-values {
 	padding: 4.267rem 0 3.375rem;
 	background-image: linear-gradient(to left, #00d9bf, #24efa6);
+
+	@media only screen and (min-width: 1200px) {
+		max-width: 75%;
+		margin: 0 auto;
+		margin-bottom: -52rem;
+		padding: 12rem 0 14rem;
+		position: relative;
+		z-index: 2;
+		transform: translateY(-52rem);
+
+		.wrapper {
+			max-width: span(11);
+			overflow: hidden;
+		}
+	}
 
 	h2 {
 		margin: 0;
@@ -69,6 +167,10 @@
 		line-height: 1.2;
 		letter-spacing: -0.1px;
 		color: $black-three;
+
+		@media only screen and (min-width: 1200px) {
+			font-size: calc(3.375rem + 0.444rem);
+		}
 	}
 
 	ul {
@@ -86,6 +188,11 @@
 		font-size: 2rem;
 		letter-spacing: -0.2px;
 		color: #1f694e;
+
+		@media only screen and (min-width: 1200px) {
+			font-size: 2.25rem;
+			background-position: 0 calc(0.667rem + 0.296rem);
+		}
 	}
 }
 
@@ -94,11 +201,24 @@
 	padding-top: 5.063rem;
 	background: url(/assets/images/svg/characters.svg) repeat-x 0 -1.9rem;
 
+	@media only screen and (min-width: 1200px) {
+		background: url(/assets/images/svg/characters-green-huge.png) repeat-x 50% 0;
+		background-size: 95%;
+		transform: translateY(-35rem);
+		padding-top: calc(35rem + 14.4rem);
+		margin-bottom: -40rem;
+	}
+
 	h2 {
 		margin-top: 0;
 		font-size: 2.25rem;
 		font-weight: 500;
 		color: $aqua-green;
+
+		@media only screen and (min-width: 1200px) {
+			margin-bottom: 9.6rem;
+			font-size: 4.267rem;
+		}
 	}
 
 	h3 {
@@ -107,6 +227,10 @@
 		font-size: 4.2rem;
 		line-height: 1.1;
 		color: $purplish-brown;
+
+		@media only screen and (min-width: 1200px) {
+			font-size: 7.594rem;
+		}
 	}
 
 	p {
@@ -130,32 +254,81 @@
 		&:last-of-type {
 			padding-bottom: 0;
 		}
+
+		@media only screen and (min-width: 1200px) {
+			padding-left: 7rem;
+			font-size: calc(2.25rem - 0.296rem);
+
+			&::before {
+				position: absolute;
+				top: 0;
+				left: 3rem;
+				font-size: 3.375rem;
+			}
+		}
 	}
 }
 
 .manifesto-principles__first-container {
-	padding: 3rem 0;
+	margin: 3.375rem 0;
+	padding: 3.375rem 0;
 	position: relative;
 	overflow: hidden;
 
+	@media only screen and (min-width: 1200px) {
+		margin: 0 0 7.594rem;
+		padding: 0 0 7.594rem;
+	}
+
 	//Dealing with the funky characters
 	.manifesto-backgrounds--top {
-		top: 4.25rem;
+		top: 1.25rem;
 		left: 0;
 	}
 
 	.manifesto-backgrounds--bottom {
-		bottom: -1.75rem;
+		bottom: -1.25rem;
 		left: 0;
 	}
 }
 
+
+//Motivation block
+.manifesto-principles__motivation {
+
+	@media only screen and (min-width: 1200px) {
+		max-width: span(10);
+		margin: 0 auto;
+		padding: 11.391rem 0 14.4rem;
+
+		.content {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.motivation-one, .motivation-two {
+			flex: 0 0 span(5);
+		}
+
+		.motivation-two {
+			padding-left: gutters();
+		}
+	}
+}
+
 .manifesto-principles__first {
-	margin-top: 3.375rem;
 	padding: 5.063rem 0;
 	position: relative;
 	background-color: $azul;
 	box-shadow: 0 2px 13px 0 rgba(5, 34, 37, 0.19);
+
+	@media only screen and (min-width: 1200px) {
+		max-width: span(7 wide);
+		margin: 0 auto;
+		padding: 11.025rem 0 11.391rem;
+	}
 
 	h3, p {
 		color: #fff;
@@ -170,6 +343,19 @@
 
 		&:before {
 			color: #fff;
+		}
+	}
+}
+
+//The container of the blue first principles
+.manifesto-principles__first-container {
+
+	@media only screen and (min-width: 1200px) {
+		background: url(/assets/images/svg/characters-blue-huge.png) no-repeat 50% 50%;
+		background-size: 100%;
+
+		.manifesto-backgrounds {
+			display: none;
 		}
 	}
 }
@@ -201,5 +387,27 @@
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
+	}
+}
+
+//The last of the principles
+.manifesto-principles__impact {
+
+	@media only screen and (min-width: 1200px) {
+
+		.content {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			padding-bottom: 14.4rem;
+
+			> div {
+				flex: 0 0 span(6);
+			}
+
+			> figure {
+				flex: 0 0 span(5);
+			}
+		}
 	}
 }
