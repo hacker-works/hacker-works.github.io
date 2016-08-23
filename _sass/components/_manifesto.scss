@@ -22,6 +22,8 @@
 
 		.wrapper {
 			max-width: 85vw;
+			padding-right: 6rem;
+			padding-left: 6rem;
 		}
 	}
 
@@ -64,12 +66,14 @@
 	}
 
 	//sadly we put the @mq because of the h1
-	@media only screen and (min-width: 1440px) {
+	@media only screen and (min-width: 1366px) {
 		padding-bottom: 0;
 		background-image: none;
 
 		.wrapper {
 			max-width: 85vw;
+			padding-right: 6rem;
+			padding-left: 6rem;
 		}
 
 		h1 {
@@ -173,22 +177,26 @@
 	padding: 4.267rem 0 3.375rem;
 	background-image: linear-gradient(to left, #00d9bf, #24efa6);
 
-	@media only screen and (min-width: 1440px) {
+	@media only screen and (min-width: 1366px) {
 		max-width: 85vw;
 		margin: 0 auto;
 		margin-bottom: -52rem;
-		padding: 0 0 14rem;
+		padding: 0 gutter(10) 14rem;
 		position: relative;
 		z-index: 5;
 		transform: translateY(-52rem);
 
 		.wrapper {
-			max-width: span(11);
 			padding-top: 12rem;
 			overflow: hidden;
 			border-left: 1px solid rgba(117,117,117, 0.3);
-			transform: translateX(-2px);
+			// transform: translateX(-2px);
 		}
+	}
+
+	@media only screen and (min-width: 1440px) {
+		padding-left: 6rem;
+		padding-right: 6rem;
 	}
 
 	@media only screen and (min-width: 1601px) {
@@ -244,7 +252,7 @@
 	padding-top: 5.063rem;
 	background: url(/assets/images/svg/characters.svg) repeat-x 0 -1.9rem;
 
-	@media only screen and (min-width: 1440px) {
+	@media only screen and (min-width: 1366px) {
 		background: url(/assets/images/svg/characters-green-huge.png) repeat-x 50% 0;
 		background-size: 95%;
 		transform: translateY(-50rem);
