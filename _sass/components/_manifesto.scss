@@ -1,56 +1,539 @@
+//Styling the headers
+//Black'n'Green
+.site-header--manifesto {
+	background-color: $black;
+
+	@media only screen and (min-width: 1024px) {
+		padding-top: 17.086rem;
+		padding-bottom: 4.267rem;
+
+		.wrapper {
+			@include container();
+			width: auto;
+		  padding: 0 5rem;
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1440px) {
+
+		.wrapper {
+			max-width: 85vw;
+			padding-right: 6rem;
+			padding-left: 6rem;
+		}
+	}
+
+	@media only screen and (min-width: 1601px) {
+		.wrapper {
+			max-width: 1440px;
+		}
+	}
+
+	//The back to the site link
+	.back-to-site {
+
+		@media only screen and (min-width: 1024px) {
+			position: absolute;
+			top: calc(11.391rem - 6.4rem);
+			right: 6.4rem;
+			font-size: 1.896rem;
+		}
+	}
+}
+
+//Thea header with the green characters and stuff
+.manifesto-header {
+	padding: 0 0 6.4rem;
+	position: relative;
+	background: $black url(/assets/images/svg/characters.svg) repeat-x 0 calc(100% + 7px);
+	overflow: hidden;
+
+	h1 {
+		margin: 0;
+		line-height: 2;
+		font-size: 2rem;
+		font-weight: 300;
+		letter-spacing: -0.1px;
+		color: #fff;
+
+		@media only screen and (min-width: 768px) {
+			font-size: 2.844rem;
+		}
+	}
+
+	//sadly we put the @mq because of the h1
+	@media only screen and (min-width: 1366px) {
+		padding-bottom: 0;
+		background-image: none;
+
+		.wrapper {
+			max-width: 85vw;
+			padding-right: 6rem;
+			padding-left: 6rem;
+		}
+
+		h1 {
+			max-width: span(8);
+			padding-bottom: 70rem;
+			padding-left: 4.6rem;
+			border-left: 1px solid rgba(117,117,117, 0.3);
+		}
+	}
+
+	@media only screen and (min-width: 1601px) {
+
+		.wrapper {
+			max-width: 1440px;
+		}
+	}
+
+	//controlling the backgounds
+	.manifesto-backgrounds {
+		display: none;
+		bottom: -3.25rem;
+		left: 0;
+	}
+}
+
+
 .manifesto {
 	counter-reset: values;
 
-	ol {
-		@extend %u-clear-list;
+	.site-footer {
+		background-color: $brand-green;
 
-		li {
-			padding-left: 3.375rem;
-			position: relative;
+		p {
+			color: $brand-black;
+		}
+	}
+
+	figure {
+		margin: 3.375rem 0;
+	}
+
+	.manifesto-backgrounds {
+		margin: 0;
+		padding: 0;
+	}
+
+	.logo-normal {
+
+		@media only screen and (min-width: 768px) {
+			height: calc(5.063rem + 0.296rem);
+		}
+
+		@media only screen and (min-width: 1024px) {
+			height: calc(6.4em + 0.667rem);
+		}
+
+		@media only screen and (min-width: 1366px) {
+			height: 128px;
+			margin-bottom: 13rem;
+		}
+	}
+}
+
+.manifesto-content {
+
+	p {
+		padding-left: gutter(4);
+		border-left: 1px solid rgba(117,117,117, 0.3);
+	}
+}
+
+//The sensibilities
+.manifesto-principles__sensibilities {
+
+	.content {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	@media only screen and (min-width: 1024px) {
+
+		.content {
+			flex-direction: row-reverse;
+			justify-content: space-between;
+		}
+
+		.quotes {
+			flex: 0 0 span(5);
+		}
+
+		figure {
+			flex: 0 0 span(6);
+			margin: 0 0 0 span(1);
+			transform: translateX(span(1));
+		}
+	}
+}
+
+//The values of hacker.works
+.manifesto-values {
+	padding: 4.267rem 0 3.375rem;
+	background-image: linear-gradient(to left, #00d9bf, #24efa6);
+
+	@media only screen and (min-width: 1366px) {
+		max-width: 85vw;
+		margin: 0 auto;
+		margin-bottom: -52rem;
+		padding: 0 gutter(10) 14rem;
+		position: relative;
+		z-index: 5;
+		transform: translateY(-52rem);
+
+		.wrapper {
+			padding-top: 12rem;
+			overflow: hidden;
+			border-left: 1px solid rgba(117,117,117, 0.3);
+			// transform: translateX(-2px);
+		}
+	}
+
+	@media only screen and (min-width: 1366px) {
+		padding-left: 6rem;
+		padding-right: 6rem;
+	}
+
+	@media only screen and (min-width: 1601px) {
+		max-width: 1440px;
+	}
+
+	h2 {
+		margin: 0;
+		margin-bottom: 3.6rem;
+		font-size: 3.2rem;
+		font-weight: 500;
+		line-height: 1.2;
+		letter-spacing: -0.1px;
+		color: $black-three;
+
+		@media only screen and (min-width: 1200px) {
+			font-size: calc(3.375rem + 0.444rem);
+		}
+	}
+
+	ul {
+		display: block;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		z-index: 10;
+		list-style: none;
+	}
+
+	//the value itself
+	li {
+		margin-bottom: 2.844rem;
+		padding-left: gutter(4);
+		background: url(/assets/images/svg/gt.svg) no-repeat 0 0.667rem;
+		font-family: $inconsolata-font-family;
+		font-size: 2rem;
+		letter-spacing: -0.2px;
+		color: #1f694e;
+
+		@media only screen and (min-width: 768px) {
+			font-size: 2.25rem;
+			background-position: 0 calc(0.667rem + 0.296rem);
+		}
+
+		@media only screen and (min-width: 1024px) {
+			font-size: calc(3.375rem - 0.296rem);
+		}
+	}
+}
+
+//The principles of hacker.works
+.manifesto-principles {
+	padding-top: 5.063rem;
+	background: url(/assets/images/svg/characters.svg) repeat-x 0 -1.9rem;
+
+	@media only screen and (min-width: 1366px) {
+		background: url(/assets/images/svg/characters-green-huge.png) repeat-x 50% 0;
+		background-size: 95%;
+		transform: translateY(-50rem);
+		padding-top: calc(50rem + 14.4rem);
+		margin-bottom: -55rem;
+
+		& > .wrapper {
+			max-width: 85vw;
+		}
+	}
+
+	@media only screen and (min-width: 1601px) {
+
+		& > .wrapper {
+			max-width: 1440px;
+		}
+	}
+
+	h2 {
+		margin-top: 0;
+		font-size: 2.25rem;
+		font-weight: 500;
+		color: $aqua-green;
+
+		@media only screen and (min-width: 1366px) {
+			margin-bottom: 9.6rem;
+			font-size: 4.267rem;
+		}
+	}
+
+	h3 {
+		margin: 0.444em 0;
+		font-family: $inconsolata-font-family;
+		font-size: 4.2rem;
+		line-height: 1.1;
+		color: $purplish-brown;
+
+		@media only screen and (min-width: 1024px) {
+			margin-bottom: 4.6rem;
+			font-size: 7.594rem;
+		}
+	}
+
+	p {
+		margin: 0;
+		padding-bottom: 2.844rem;
+		position: relative;
+		font-size: 1.896rem;
+		color: $purplish-brown;
+
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+
+		&::before {
+			content: counter(values);
+			counter-increment: values;
+			display: block;
+			padding-bottom: 1rem;
+			line-height: 1;
+			font-family: $inconsolata-font-family;
+			font-size: 3.375rem;
+			color: $brand-green;
+		}
+
+		@media only screen and (min-width: 1024px) {
+			padding-left: 7rem;
+			padding-bottom: 3.375rem;
+			font-size: calc(2.25rem - 0.296rem);
 
 			&::before {
-				content: counter(values);
-				counter-increment: values;
-				display: block;
 				position: absolute;
 				top: 0;
-				left: 0;
-				color: $brand-green;
-			}
-		}
-
-		a {
-			color: $brand-black;
-
-			&:hover {
-				color: $black;
+				left: 2.5rem;
+				font-size: 3.375rem;
 			}
 		}
 	}
+}
 
-	h4 {
-		margin: 1rem 0 0.667rem;
+.manifesto-principles__first-container {
+	margin: 3.375rem 0;
+	padding: 3.375rem 0;
+	position: relative;
+	overflow: hidden;
+
+	@media only screen and (min-width: 1366px) {
+		margin: 0 0 7.594rem;
+		padding: 0 0 7.594rem;
+		background: url(/assets/images/svg/characters-blue-huge.png) no-repeat 50% 50%;
+		background-size: 100%;
+
+		.manifesto-backgrounds {
+			display: none;
+		}
 	}
 
-	.jobs-nav {
-		background-image: linear-gradient(to left, #00d9bf, #24efa6);
+	//Dealing with the funky characters
+	.manifesto-backgrounds--top {
+		top: 1.25rem;
+		left: 0;
+	}
 
-		li {
+	.manifesto-backgrounds--bottom {
+		bottom: -1.25rem;
+		left: 0;
+	}
+}
+
+.manifesto-principles__first {
+	padding: 5.063rem 0 calc(5.063rem + 1rem);
+	position: relative;
+	background-color: $azul;
+	box-shadow: 0 2px 13px 0 rgba(5, 34, 37, 0.19);
+
+	@media only screen and (min-width: 1366px) {
+		max-width: span(10 wide);
+		margin: 0 auto;
+		padding: 11.025rem gutter(4) 11.391rem;
+	}
+
+	@media only screen and (min-width: 1900px) {
+		max-width: span(7 wide);
+		padding-left: span(1);
+		padding-right: span(1);
+	}
+
+	h3, p {
+		color: #fff;
+	}
+
+	h3 {
+		margin: 0 0 5.063rem;
+	}
+
+	p {
+		border-color: #fff;
+		font-family: $inconsolata-font-family;
+
+		&:before {
+			color: #fff;
+		}
+
+		@media only screen and (min-width: 768px) {
+			font-size: calc(2.25rem + 0.296rem)
+		}
+
+		@media only screen and (min-width: 1024px) {
 
 			&::before {
-				content: '';
+				top: 0.444rem;
+			}
+		}
+	}
+}
+
+
+//Motivation block
+.manifesto-principles__motivation {
+	padding: 2.844rem 0;
+
+	@media only screen and (max-width: 1024px) and (orientation: portrait) {
+
+		.motivation-one {
+
+			p {
+
+				&:last-of-type {
+					padding-bottom: 2.844rem;
+				}
 			}
 		}
 	}
 
-	.jobs-application-button {
-		background-color: $brand-blue-1;
-		color: #fff;
-		transform: scale(0.5);
-		transform-origin: bottom right;
+	@media only screen and (min-width: 1024px) {
 
-		@media only screen and (min-width: 640px) {
-			transform: none;
+		.content {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: stretch;
+		}
+
+		.motivation-one {
+			flex: 0 0 span(6);
+		}
+
+		.motivation-two {
+			flex: 0 0 span(6);
+			padding-left: gutters();
+		}
+
+		.motivation-one, .motivation-two {
+			display: flex;
+			flex-direction: column;
+			align-content: stretch;
+
+			p {
+				flex: auto;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1366px) {
+		max-width: span(10);
+		margin: 0 auto;
+		padding: 11.391rem 0 14.4rem;
+	}
+}
+
+//The backgrounds with the lots of characters
+.manifesto-backgrounds {
+	min-width: 100%;
+	min-height: 60px;
+	position: absolute;
+	text-align: center;
+	overflow: hidden;
+
+	img {
+		display: inline-block;
+		max-width: none;
+	}
+
+	//Small and large resolution images
+	.manifesto-background--large {
+		display: none;
+	}
+}
+
+.manifesto-backgrounds__center {
+	position: relative;
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+//The last of the principles
+.manifesto-principles__impact {
+
+	@media only screen and (min-width: 1024px) {
+
+		.content {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-content: stretch;
+			padding-bottom: 14.4rem;
+
+			> div {
+				flex: 0 0 span(5);
+			}
+
+			> figure {
+				flex: 0 0 span(6);
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: flex-end;
+				margin: 0;
+				transform: translateX(calc(6rem));
+
+				img {
+					flex: auto;
+				}
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1600px) {
+
+		.content {
+			flex-direction: row-reverse;
+
+			> figure {
+				transform: none;
+			}
 		}
 	}
 }

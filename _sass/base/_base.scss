@@ -473,7 +473,7 @@ body {
 
 .wrapper {
   @include container();
-  padding: 0 gutters(4);
+  padding: 0 gutter(4);
 
   & > .page {
     padding-right: 3rem;
@@ -485,7 +485,7 @@ body {
     margin: 0 auto;
   }
 
-  @media only screen and (min-width: 1390px) {
+  @media only screen and (min-width: 1440px) {
     padding: 0 5rem;
 
     & > .page {

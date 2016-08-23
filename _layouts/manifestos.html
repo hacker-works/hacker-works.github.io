@@ -5,12 +5,103 @@
 
   <body class="manifesto">
 
-    {% include header-mini.html %}
+    {% include header-manifesto.html %}
 
     <main>
-      {{ content }}
+      <article class="manifesto-content">
+        <header class="manifesto-header">
+          <a href="https://goo.gl/forms/FHBQsOeNSKgInYeC2" class="jobs-application-button" target="_blank">Sign the manifesto &gt;</a>
+          <div class="wrapper">
+            <h1>
+              We are an aspiring team of hackers. We uncover the hacker mindset for companies and people so they can overcome workplace and industry constraints. We build communities and work environments that incubate impactful digital products.
+            </h1>
+          </div>
+        </header>
+        <section class="manifesto-values">
+          <div class="wrapper">
+            <h2>Through this work we have come to value:</h2>
+            <ul>
+              <li>Not only honing the skills and craftsmanship for building well-crafted software but also cultivating <a href="#sensibilities">#sensibilities</a></li>
+              <li>Not only continuously changing and steadily adding value but also nurturing individual <a href="#motivation">#motivations</a> to ensure continuity of teams</li>
+              <li>Not only delivering solutions but also reasoning from <a href="#reasoning-from-the-first-principles">#first principles</a> to creatively overcome limitations and achieve novel and clever outcomes</li>
+              <li>Not only partnering and collaborating with the client but also focusing on <a href="#outcomes-amp-impact">#outcomes</a> and taking responsibility for <a href="#outcomes-amp-impact">#impact</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="manifesto-principles">
+          <div class="wrapper">
+            <h2>We stand by the following principles:</h2>
+
+            <div class="manifesto-principles__sensibilities">
+              <h3>#sensibilities</h3>
+
+              <div class="content">
+                <figure>
+                  <img src="/assets/images/svg/connect.svg" alt="Connect" />
+                </figure>
+
+                <div class="quotes">
+                  <p><strong>The culture of innovation requires sensibility</strong> - an ability to appreciate and respond to complex emotional and aesthetic influences. Products should not just ‘work’ for the users; they should create an emotional connection.</p>
+                  <p><strong>The best designs, services and products are integrated systems.</strong> They fit all the little details into a greater context and build a meaningful experience that satisfy the user’s senses.</p>
+                </div>
+              </div>
+
+            </div>
+            <div class="manifesto-principles__motivation">
+              <h3>#motivation</h3>
+              <div class="content">
+                <div class="motivation-one">
+                  <p><strong>The best workplace</strong> transforms vocation into a form of living with intrinsic rewards. It’s inhuman to treat work instrumentally, as a means only to other ends.</p>
+
+                  <p><strong>Understanding the whole makes work more enjoyable.</strong> That calls for self-organized teams, which are small enough to create understanding through face-to-face contact, transparency and access to information.</p>
+                </div>
+                <div class="motivation-two">
+                  <p><strong>Humans are built with an inner drive.</strong> The most effective incentive is to give hackers real control and responsibility for important aspects of work - whether it’s deciding what to work on, when to do it, or how.</p>
+
+                  <p>The <strong>encouraged exploration of ideas,</strong> which inspire different thinking, triggers the drive to be better. Once a mind is stretched by a new idea, an offbeat practice or a better tool, it will never return to its original position.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="manifesto-principles__first-container">
+            <div class="manifesto-principles__first">
+              <div class="wrapper">
+                <h3>#reasoning from the first principles</h3>
+
+                <p>Ambitious problems require starting over, reexamining the core components of the problem, and building up the solution from there. <strong>That is what ties together the most innovative ideas.</strong> Reasoning only on analogies from past experiences does not!</p>
+              </div>
+            </div>
+            <figure class="manifesto-backgrounds manifesto-backgrounds--top">
+              <img src="/assets/images/svg/characters--blue.svg" alt="random characters" class="manifesto-background--small" />
+            </figure>
+            <figure class="manifesto-backgrounds manifesto-backgrounds--bottom">
+              <img src="/assets/images/svg/characters--blue.svg" alt="random characters" class="manifesto-background--small" />
+            </figure>
+          </div>
+
+          <div class="wrapper">
+            <div class="manifesto-principles__impact">
+              <h3>#outcomes &amp; impact</h3>
+
+              <div class="content">
+                <div>
+                  <p><strong>Outcomes have to be defined and measured.</strong> It is important to understand the value that will be derived from digital products and evaluate the impact of constraints may have.</p>
+
+                  <p><strong>Saying no is essential.</strong> The thoughtful reduction of ongoing work leaves room to direct attention and effort to the most impactful and meaningful work.</p>
+                  <p>Focusing only on the time, budget and features leads to the displacement of goals. <strong>Success is defined with delivering value and meeting the project goals.</strong></p>
+                </div>
+                <figure>
+                  <img src="/assets/images/svg/ala-chart.svg" alt="Chart-like illustration" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
     </main>
 
+    {% include subscribe.html %}
 
     {% include footer.html %}
 
@@ -24,7 +115,6 @@
 
       ga('create', 'UA-79952132-1', 'auto');
       ga('send', 'pageview');
-
     </script>
   </body>
 
