@@ -5,6 +5,7 @@
 
 	@media only screen and (min-width: 1024px) {
 		padding-top: 17.086rem;
+		padding-bottom: 4.267rem;
 
 		.wrapper {
 			@include container();
@@ -14,17 +15,26 @@
 			&::after {
 				display: none;
 			}
+		}
+	}
 
-			@media only screen and (min-width: 1025px) {
-				max-width: 75%;
-			}
+	@media only screen and (min-width: 1440px) {
+
+		.wrapper {
+			max-width: 85vw;
+		}
+	}
+
+	@media only screen and (min-width: 1601px) {
+		.wrapper {
+			max-width: 1440px;
 		}
 	}
 
 	//The back to the site link
 	.back-to-site {
 
-		@media only screen and (min-width: 1200px) {
+		@media only screen and (min-width: 1024px) {
 			position: absolute;
 			top: calc(11.391rem - 6.4rem);
 			right: 6.4rem;
@@ -33,6 +43,7 @@
 	}
 }
 
+//Thea header with the green characters and stuff
 .manifesto-header {
 	padding: 0 0 6.4rem;
 	position: relative;
@@ -47,22 +58,32 @@
 		letter-spacing: -0.1px;
 		color: #fff;
 
-		@media only screen and (min-width: 1200px) {
+		@media only screen and (min-width: 768px) {
 			font-size: 2.844rem;
 		}
 	}
 
-	@media only screen and (min-width: 1200px) {
+	//sadly we put the @mq because of the h1
+	@media only screen and (min-width: 1440px) {
 		padding-bottom: 0;
 		background-image: none;
+
+		.wrapper {
+			max-width: 85vw;
+		}
 
 		h1 {
 			max-width: span(8);
 			padding-bottom: 70rem;
 			padding-left: 4.6rem;
 			border-left: 1px solid rgba(117,117,117, 0.3);
-			position: relative;
-			z-index: 5;
+		}
+	}
+
+	@media only screen and (min-width: 1601px) {
+
+		.wrapper {
+			max-width: 1440px;
 		}
 	}
 
@@ -95,9 +116,17 @@
 		padding: 0;
 	}
 
-	@media only screen and (min-width: 1200px) {
+	.logo-normal {
 
-		.logo-normal {
+		@media only screen and (min-width: 768px) {
+			height: calc(5.063rem + 0.296rem);
+		}
+
+		@media only screen and (min-width: 1024px) {
+			height: calc(6.4em + 0.667rem);
+		}
+
+		@media only screen and (min-width: 1366px) {
 			height: 128px;
 			margin-bottom: 13rem;
 		}
@@ -107,7 +136,7 @@
 .manifesto-content {
 
 	p {
-		padding-left: gutters(4);
+		padding-left: gutter(4);
 		border-left: 1px solid rgba(117,117,117, 0.3);
 	}
 }
@@ -144,19 +173,26 @@
 	padding: 4.267rem 0 3.375rem;
 	background-image: linear-gradient(to left, #00d9bf, #24efa6);
 
-	@media only screen and (min-width: 1200px) {
-		max-width: 75%;
+	@media only screen and (min-width: 1440px) {
+		max-width: 85vw;
 		margin: 0 auto;
 		margin-bottom: -52rem;
-		padding: 12rem 0 14rem;
+		padding: 0 0 14rem;
 		position: relative;
-		z-index: 2;
+		z-index: 5;
 		transform: translateY(-52rem);
 
 		.wrapper {
 			max-width: span(11);
+			padding-top: 12rem;
 			overflow: hidden;
+			border-left: 1px solid rgba(117,117,117, 0.3);
+			transform: translateX(-2px);
 		}
+	}
+
+	@media only screen and (min-width: 1601px) {
+		max-width: 1440px;
 	}
 
 	h2 {
@@ -174,24 +210,31 @@
 	}
 
 	ul {
+		display: block;
 		margin: 0;
 		padding: 0;
+		position: relative;
+		z-index: 10;
 		list-style: none;
 	}
 
 	//the value itself
 	li {
 		margin-bottom: 2.844rem;
-		padding-left: 2rem;
+		padding-left: gutter(4);
 		background: url(/assets/images/svg/gt.svg) no-repeat 0 0.667rem;
 		font-family: $inconsolata-font-family;
 		font-size: 2rem;
 		letter-spacing: -0.2px;
 		color: #1f694e;
 
-		@media only screen and (min-width: 1200px) {
+		@media only screen and (min-width: 768px) {
 			font-size: 2.25rem;
 			background-position: 0 calc(0.667rem + 0.296rem);
+		}
+
+		@media only screen and (min-width: 1024px) {
+			font-size: calc(3.375rem - 0.296rem);
 		}
 	}
 }
@@ -201,12 +244,23 @@
 	padding-top: 5.063rem;
 	background: url(/assets/images/svg/characters.svg) repeat-x 0 -1.9rem;
 
-	@media only screen and (min-width: 1200px) {
+	@media only screen and (min-width: 1440px) {
 		background: url(/assets/images/svg/characters-green-huge.png) repeat-x 50% 0;
 		background-size: 95%;
-		transform: translateY(-35rem);
-		padding-top: calc(35rem + 14.4rem);
-		margin-bottom: -40rem;
+		transform: translateY(-50rem);
+		padding-top: calc(50rem + 14.4rem);
+		margin-bottom: -55rem;
+
+		& > .wrapper {
+			max-width: 85vw;
+		}
+	}
+
+	@media only screen and (min-width: 1601px) {
+
+		& > .wrapper {
+			max-width: 1440px;
+		}
 	}
 
 	h2 {
@@ -215,7 +269,7 @@
 		font-weight: 500;
 		color: $aqua-green;
 
-		@media only screen and (min-width: 1200px) {
+		@media only screen and (min-width: 1366px) {
 			margin-bottom: 9.6rem;
 			font-size: 4.267rem;
 		}
@@ -228,17 +282,22 @@
 		line-height: 1.1;
 		color: $purplish-brown;
 
-		@media only screen and (min-width: 1200px) {
+		@media only screen and (min-width: 1024px) {
+			margin-bottom: 4.6rem;
 			font-size: 7.594rem;
 		}
 	}
 
 	p {
 		margin: 0;
-		padding-bottom: 1.896rem;
+		padding-bottom: 2.844rem;
 		position: relative;
 		font-size: 1.896rem;
 		color: $purplish-brown;
+
+		&:last-of-type {
+			padding-bottom: 0;
+		}
 
 		&::before {
 			content: counter(values);
@@ -251,18 +310,15 @@
 			color: $brand-green;
 		}
 
-		&:last-of-type {
-			padding-bottom: 0;
-		}
-
-		@media only screen and (min-width: 1200px) {
+		@media only screen and (min-width: 1024px) {
 			padding-left: 7rem;
+			padding-bottom: 3.375rem;
 			font-size: calc(2.25rem - 0.296rem);
 
 			&::before {
 				position: absolute;
 				top: 0;
-				left: 3rem;
+				left: 2.5rem;
 				font-size: 3.375rem;
 			}
 		}
@@ -275,9 +331,15 @@
 	position: relative;
 	overflow: hidden;
 
-	@media only screen and (min-width: 1200px) {
+	@media only screen and (min-width: 1366px) {
 		margin: 0 0 7.594rem;
 		padding: 0 0 7.594rem;
+		background: url(/assets/images/svg/characters-blue-huge.png) no-repeat 50% 50%;
+		background-size: 100%;
+
+		.manifesto-backgrounds {
+			display: none;
+		}
 	}
 
 	//Dealing with the funky characters
@@ -292,42 +354,22 @@
 	}
 }
 
-
-//Motivation block
-.manifesto-principles__motivation {
-
-	@media only screen and (min-width: 1200px) {
-		max-width: span(10);
-		margin: 0 auto;
-		padding: 11.391rem 0 14.4rem;
-
-		.content {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: space-between;
-		}
-
-		.motivation-one, .motivation-two {
-			flex: 0 0 span(5);
-		}
-
-		.motivation-two {
-			padding-left: gutters();
-		}
-	}
-}
-
 .manifesto-principles__first {
-	padding: 5.063rem 0;
+	padding: 5.063rem 0 calc(5.063rem + 1rem);
 	position: relative;
 	background-color: $azul;
 	box-shadow: 0 2px 13px 0 rgba(5, 34, 37, 0.19);
 
-	@media only screen and (min-width: 1200px) {
-		max-width: span(7 wide);
+	@media only screen and (min-width: 1366px) {
+		max-width: span(10 wide);
 		margin: 0 auto;
-		padding: 11.025rem 0 11.391rem;
+		padding: 11.025rem gutter(4) 11.391rem;
+	}
+
+	@media only screen and (min-width: 1900px) {
+		max-width: span(7 wide);
+		padding-left: span(1);
+		padding-right: span(1);
 	}
 
 	h3, p {
@@ -340,23 +382,77 @@
 
 	p {
 		border-color: #fff;
+		font-family: $inconsolata-font-family;
 
 		&:before {
 			color: #fff;
 		}
+
+		@media only screen and (min-width: 768px) {
+			font-size: calc(2.25rem + 0.296rem)
+		}
+
+		@media only screen and (min-width: 1024px) {
+
+			&::before {
+				top: 0.444rem;
+			}
+		}
 	}
 }
 
-//The container of the blue first principles
-.manifesto-principles__first-container {
 
-	@media only screen and (min-width: 1200px) {
-		background: url(/assets/images/svg/characters-blue-huge.png) no-repeat 50% 50%;
-		background-size: 100%;
+//Motivation block
+.manifesto-principles__motivation {
+	padding: 2.844rem 0;
 
-		.manifesto-backgrounds {
-			display: none;
+	@media only screen and (max-width: 1024px) and (orientation: portrait) {
+
+		.motivation-one {
+
+			p {
+
+				&:last-of-type {
+					padding-bottom: 2.844rem;
+				}
+			}
 		}
+	}
+
+	@media only screen and (min-width: 1024px) {
+
+		.content {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: stretch;
+		}
+
+		.motivation-one {
+			flex: 0 0 span(6);
+		}
+
+		.motivation-two {
+			flex: 0 0 span(6);
+			padding-left: gutters();
+		}
+
+		.motivation-one, .motivation-two {
+			display: flex;
+			flex-direction: column;
+			align-content: stretch;
+
+			p {
+				flex: auto;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1366px) {
+		max-width: span(10);
+		margin: 0 auto;
+		padding: 11.391rem 0 14.4rem;
 	}
 }
 
@@ -393,20 +489,42 @@
 //The last of the principles
 .manifesto-principles__impact {
 
-	@media only screen and (min-width: 1200px) {
+	@media only screen and (min-width: 1024px) {
 
 		.content {
 			display: flex;
-			flex-direction: row-reverse;
+			flex-direction: row;
 			justify-content: space-between;
+			align-content: stretch;
 			padding-bottom: 14.4rem;
 
 			> div {
-				flex: 0 0 span(6);
+				flex: 0 0 span(5);
 			}
 
 			> figure {
-				flex: 0 0 span(5);
+				flex: 0 0 span(6);
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: flex-end;
+				margin: 0;
+				transform: translateX(calc(6rem));
+
+				img {
+					flex: auto;
+				}
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1600px) {
+
+		.content {
+			flex-direction: row-reverse;
+
+			> figure {
+				transform: none;
 			}
 		}
 	}
