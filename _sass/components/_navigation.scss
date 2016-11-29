@@ -88,7 +88,7 @@
 		}
 	}
 
-	@media only screen and (min-width: 1024px) {
+	@media only screen and (min-width: 1366px) {
 		width: auto;
 		height: auto;
 		padding: 5rem;
@@ -98,15 +98,6 @@
 		top: 0;
 		right: 2rem;
 		background-color: transparent;
-		transform: scale(0.5);
-		transform-origin: top right;
-		transition: transform 0.1s ease-in;
-
-		&:hover {
-			transform: scale(1);
-			transition: transform 0.1s ease-in,
-									padding 0.1s ease;
-		}
 
 		.wrapper {
 			padding: 0;

@@ -1,15 +1,14 @@
 // Our variables
 $inconsolata-font-family: 	Inconsolata, monospace;
 $roboto-font-family:      	"Roboto Mono", monospace;
-$base-font-family:        	"avenir-book", verdana, arial, sans-serif;
+$avenir-book-font-family: 	"avenir-book", sans-serif;
 $avenir-medium-font-family: "avenir-medium", sans-serif;
 $avenir-heavy-font-family: 	"avenir-heavy", sans-serif;
+$base-font-family:        	$avenir-book-font-family;
 $base-font-size:         		1.6rem;
 $reset-font-size:						10px;
 $small-font-size:        		$base-font-size * 0.875;
 $base-line-height:     	   	1.5;
-//remove
-$spacing-unit: 1;
 
 //Brand Colors
 //Got them from the palette of the sketch file
@@ -48,6 +47,23 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Mixins
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+//MQ (Media Query)
+
+$handheld: 				 37.5rem;
+$tablet-portrait:  76.8rem;
+$tablet-landscape: 10.24rem;
+$laptop: 					 13.66rem;
+$desktop: 				 160rem;
+$dekstop-large: 	 190rem;
+
+@mixin mq($device) {
+	@media only screen and (min-width: $device) {
+		@content;
+	}
+}
 
 /* SUSY The oddbird */
 $susy: (
@@ -59,18 +75,32 @@ $susy: (
 
 /* Text styles */
 %masthead-text {
-	font-family: $avenir-heavy-font-family;
+	font-family: $avenir-book-font-family;
 	font-size: 6.4rem;
-	line-height: 1.1;
+	font-weight: 900;
+	line-height: 1.12;
 	letter-spacing: -0.2px;
 	color: #fff;
 
 	@media only screen and (min-width: 768px) {
-		font-size: 11.391rem;
+		font-size: 11rem;
+		line-height: 1.13;
+		letter-spacing: -0.3px;
+
+	}
+
+	@media only screen and (min-width: 1024px) {
+		font-size: 10.6rem;
+		line-height: 1.17;
+		letter-spacing: -0.3px;
+		color: #ffffff;
 	}
 
 	@media only screen and (min-width: 1366px) {
-		font-size: 14.4rem;
+		font-size: 13.6rem;
+		line-height: 1.02;
+		letter-spacing: -0.4px;
+		color: #fff;
 	}
 }
 
