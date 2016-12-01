@@ -52,12 +52,12 @@ $grey-color-dark:  darken($grey-color, 25%);
 \~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 //MQ (Media Query)
 
-$handheld: 				 37.5rem;
-$tablet-portrait:  76.8rem;
-$tablet-landscape: 10.24rem;
-$laptop: 					 13.66rem;
-$desktop: 				 160rem;
-$dekstop-large: 	 190rem;
+$handheld: 				 375px;
+$tablet-portrait:  768px;
+$tablet-landscape: 1024px;
+$laptop: 					 1366px;
+$desktop: 				 1600px;
+$dekstop-large: 	 1900px;
 
 @mixin mq($device) {
 	@media only screen and (min-width: $device) {
