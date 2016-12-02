@@ -52,12 +52,21 @@ $grey-color-dark:  darken($grey-color, 25%);
 \~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 //MQ (Media Query)
 
+<<<<<<< 97c25afbe70db6953b2e8bdd96c779df7c140c23
 $handheld: 				 375px;
 $tablet-portrait:  768px;
 $tablet-landscape: 1024px;
 $laptop: 					 1366px;
 $desktop: 				 1600px;
 $dekstop-large: 	 1900px;
+=======
+$handheld: 				 37.6rem;
+$tablet-portrait:  76.9rem;
+$tablet-landscape: 10.25rem;
+$laptop: 					 13.67rem;
+$desktop: 				 160.1rem;
+$dekstop-large: 	 190.1rem;
+>>>>>>> Fixing fonts
 
 @mixin mq($device) {
 	@media only screen and (min-width: $device) {
@@ -110,8 +119,16 @@ $susy: (
 	line-height: 1.1;
 	color: $purplish-brown;
 
-	@media only screen and (min-width: 640px) {
+	@include mq($tablet-portrait) {
 		font-size: 6rem;
+	}
+
+	@include mq($tablet-landscape) {
+		font-size: 7.2rem;
+	}
+
+	@include mq($desktop) {
+		font-size: 8.6rem;
 	}
 }
 
@@ -143,14 +160,22 @@ $susy: (
 
 %subheading {
 	font-family: $inconsolata-font-family;
-	font-size: 1.896rem;
-	font-weight: 300;
+	font-size: 1.8rem;
+	font-weight: normal;
 	letter-spacing: -0.1px;
 	color: $greyish-brown;
 	opacity: 0.4;
 
-	@media only screen and (min-width: 640px) {
-		font-size: 2.844rem;
+	@include mq($tablet-portrait) {
+		font-size: 2.8rem;
+	}
+
+	@include mq($tablet-landscape) {
+		font-size: 3rem;
+	}
+
+	@include mq($desktop) {
+		font-size: 3.2rem;
 	}
 }
 
@@ -208,4 +233,20 @@ $susy: (
 	@media only screen and (min-width: 1440px) {
 		font-size: 3.8rem;
 	}
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Clearfix
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+%clearfix {
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.cf {
+	@extend %clearfix;
 }
