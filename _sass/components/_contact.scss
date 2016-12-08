@@ -106,7 +106,7 @@
 	color: $purplish-brown;
 
 	.wrapper {
-		max-width: 64rem;
+		max-width: 60rem;
 		margin: 0 auto;
 		padding-top: 3rem;
 		padding-bottom: 6rem;
@@ -115,9 +115,12 @@
 		overflow-y: auto;
 	}
 
+	h1 {
+		margin-bottom: 0;
+	}
+
 	input {
 		margin: 3.5rem auto 0;
-		text-align: center;
 	}
 
 	.btn-close {

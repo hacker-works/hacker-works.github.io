@@ -92,18 +92,27 @@ p ~ .btn-ctn {
 
 //Submit something
 .btn-submit {
+	min-width: 14.5rem;
+	height: 4.4rem;
 	padding: 0.75rem 0;
 	padding-left: 2rem;
 	border: 2px solid currentColor;
 	border-radius: 35px;
 	font-family: $inconsolata-font-family;
 	font-size: 1.8rem;
+	font-weight: bold;
+	text-align: center;
 	text-transform: uppercase;
 	color: $black;
 
 	&::after {
 		content: '>';
-		padding: 0 2rem 0 1rem;
+		padding: 0 2rem;
+	}
+
+	@include mq($tablet-portrait) {
+		min-width: 20rem;
+		height: 5.5rem;
 	}
 }
 

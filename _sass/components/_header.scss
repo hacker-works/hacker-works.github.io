@@ -13,12 +13,20 @@
 		padding-top: 19.6rem;
 	}
 
+	@include mq($tablet-landscape) {
+		padding-top: 17.6rem;
+	}
+
+	@include mq($laptop) {
+
+	}
+
 	h1 {
 		@extend %masthead-text;
 		margin: 0;
 
 		@include mq ($tablet-portrait) {
-			margin: 0 0 3.6;
+			margin: 0 0 3.6rem;
 		}
 
 		@include mq($tablet-landscape) {
@@ -28,6 +36,7 @@
 
 		@include mq($laptop) {
 			margin: 0 0 5rem;
+			max-width: none;
 		}
 	}
 

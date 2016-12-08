@@ -484,6 +484,7 @@ body {
 
 .page {
   margin-bottom: 8rem;
+  @extend %clearfix;
 
   p {
     @extend %page-text;
@@ -570,6 +571,16 @@ textarea {
   background: transparent;
   font-size: 1.8rem;
   color: $black;
+}
+
+input {
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: -0.1px;
+
+  @include mq($tablet-portrait) {
+    font-size: 2.2rem;
+  }
 }
 
 textarea {
