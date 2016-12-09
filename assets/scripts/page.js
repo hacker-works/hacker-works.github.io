@@ -41,20 +41,22 @@ $(document).ready(function(){
     return false;
   })
 
+  function closeForm() {
+    $('.btn-close-form').removeClass('is-triggered');
+    $('.get-in-touch__btn').removeClass('is-triggered')
+    $('.get-in-touch').removeClass('is-visible')
+
+    if ($('.get-in-touch').hasClass('is-scrollable')) {
+      $('.get-in-touch').removeClass('is-scrollable');
+      $('body').removeClass('not-scrollable');
+    }
+  }
+
   $('.btn-close-form').on('click', function(){
     var t = $(this)
     if (t.hasClass('is-triggered')) {
-      t.removeClass('is-triggered');
-      $('.get-in-touch__btn').removeClass('is-triggered')
-      $('.get-in-touch').removeClass('is-visible')
-
-      if ($('.get-in-touch').hasClass('is-scrollable')) {
-        $('.get-in-touch').removeClass('is-scrollable');
-        $('body').removeClass('not-scrollable');
-      }
-    }
-
-    else {
+      closeForm();
+    } else {
       t.addClass('is-triggered');
       $('.get-in-touch__btn').addClass('is-triggered')
       $('.get-in-touch').addClass('is-visible')
@@ -96,21 +98,23 @@ $(document).ready(function(){
     return false;
   })
 
+  function closeNav() {
+    $('.btn-close-nav').removeClass('is-triggered');
+    $('.site-header__burger').removeClass('is-triggered');
+    $('.navigation').removeClass('is-visible');
+
+    if ($('.navigation').hasClass('is-scrollable')) {
+      $('.navigation').removeClass('is-scrollable');
+      $('body').removeClass('not-scrollable');
+    }
+  }
+
   $('.btn-close-nav').on('click', function(){
     var t = $(this)
 
     if (t.hasClass('is-triggered')) {
-      t.removeClass('is-triggered');
-      $('.site-header__burger').removeClass('is-triggered');
-      $('.navigation').removeClass('is-visible');
-
-      if ($('.navigation').hasClass('is-scrollable')) {
-        $('.navigation').removeClass('is-scrollable');
-        $('body').removeClass('not-scrollable');
-      }
-    }
-
-    else {
+      closeNav();
+    } else {
       t.addClass('is-triggered');
       $('.site-header__burger').addClass('is-triggered');
       $('.navigation').addClass('is-visible');
@@ -153,7 +157,7 @@ $(document).ready(function(){
     var inputFields = $('.get-in-touch input'),
         inputArea = $('.get-in-touch textarea');
 
-    $('.get-in-touch').on('focus blur keyup', inputFields, inputArea, function(e){
+    $('.get-in-touch').on('focus blur keyup', inputFields, function(e){
       var flyingLabel = $(this).siblings('label')
           eventType = e.type;
       console.log(eventType);
@@ -168,6 +172,22 @@ $(document).ready(function(){
         flyingLabel.removeClass('hacker-form__label--flying');
       }
     });
+
+    inputArea.on('focus blur', function(e) {
+      // TODO: implement
+    });
+  });
+
+  $(document).keyup(function(e) {
+    // escape key
+    if (e.keyCode == 27) {
+      if ($('.navigation').hasClass('is-visible')) {
+        closeNav();
+      }
+      if ($('.stay-in-touch').hasClass('is-visible')) {
+        closeForm();
+      }
+    }
   });
 });
 
