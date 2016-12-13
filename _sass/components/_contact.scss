@@ -25,13 +25,21 @@
 
 	input {
 		line-height: 1.5;
+		transition: border-color 0.1s ease-in;
+
+		&:invalid {
+			outline: none;
+			border-bottom-color: $error-color;
+			box-shadow: none;
+			transition: border-color 0.1s ease-out;
+		}
 	}
 
 	label {
 		position: absolute;
 		top: 3.75rem;
 		left: 0;
-		transition: all 0.1s ease;
+		transition: all 0.1s ease-in;
 		text-transform: lowercase;
 		color: $brand-black;
 
@@ -49,6 +57,7 @@
 			top: 1.5rem;
 			opacity: 0.4;
 			font-size: 1.4rem;
+			transition-timing-function: ease-out;
 
 			span {
 				opacity: 0;
@@ -73,6 +82,14 @@
 
 		@media only screen and (min-width: 1024px) and (max-width: 1365px) {
 			margin-top: 0.8rem;
+		}
+
+		@include mq($laptop-large) {
+			margin-top: 2rem;
+		}
+
+		@include mq($desktop) {
+			margin-bottom: 0.5rem;
 		}
 	}
 
@@ -143,6 +160,15 @@
 	transition: left .4s ease-in-out,
 							transform .4s linear;
 
+	@include mq($laptop) {
+		background: $brand-green url('/assets/images/svg/hi.svg') no-repeat right 25rem;
+		background-size: 50%;
+
+		.wrapper {
+			@include container();
+		}
+	}
+
 	&.is-visible {
 		left: 0;
 	}
@@ -153,14 +179,10 @@
 
 	.wrapper {
 		max-width: none;
-	}
 
-	@media only screen and (min-width: 1366px) {
-		background: $brand-green url('/assets/images/svg/hi.svg') no-repeat right 25rem;
-		background-size: 50%;
-
-		.wrapper {
-			@include container();
+		@include mq($tablet-landscape) {
+			padding-top: 5.5rem;
+			padding-left: 12.7rem;
 		}
 	}
 
@@ -177,10 +199,18 @@
 			@include mq($tablet-landscape) {
 				margin-top: 3rem;
 			}
+
+			@include mq($laptop-large) {
+				margin-top: 2rem;
+			}
 		}
 
 		@include mq($tablet-portrait) {
 			font-size: 7.2rem;
+		}
+
+		@include mq($laptop-large) {
+			font-size: 8.6rem;
 		}
 	}
 
@@ -212,13 +242,22 @@
 
 		@include mq($tablet-landscape) {
 			width: 75rem;
+			margin-top: 1rem;
+
+			button {
+				margin-top: 3.7rem;
+			}
+		}
+
+		@include mq($laptop) {
+			width: 47rem;
 		}
 	}
 
 	.hacker-form__field {
 		width: 100%;
 
-		@include mq($tablet-landscape) {
+		@media only screen and (min-width: 1024px) and (max-width: 1439px) {
 
 			&[data-field="name"] {
 				@include span(4.75);
