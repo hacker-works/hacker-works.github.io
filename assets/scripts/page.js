@@ -33,7 +33,7 @@ $(document).ready(function(){
           theForm = $('.get-in-touch')
           formHeight = theForm.outerHeight();
       if (formHeight > siteHeader) {
-        $('body').addClass('not-scrollable')
+        setTimeout("$('body').addClass('not-scrollable')", 400);
         $('.get-in-touch').addClass('is-scrollable')
       }
     }
@@ -86,8 +86,8 @@ $(document).ready(function(){
 
       siteHeader = $('.site-header').outerHeight(false);
       navHeight = $('.navigation').outerHeight(false);
-      console.log(siteHeader);
-      console.log(navHeight)
+      // console.log(siteHeader);
+      // console.log(navHeight)
 
       if (navHeight > siteHeader) {
         $('body').addClass('not-scrollable')
@@ -157,24 +157,26 @@ $(document).ready(function(){
     var inputFields = $('.get-in-touch input'),
         inputArea = $('.get-in-touch textarea');
 
-    $('.get-in-touch').on('focus blur keyup', inputFields, function(e){
-      var flyingLabel = $(this).siblings('label')
+    function onFocusBlurKeyup(e, input) {
+      var flyingLabel = input.siblings('label')
           eventType = e.type;
-      console.log(eventType);
+      // console.log(eventType);
 
-      if($(this).val().length >= 0.1) {
-        console.log($(this).val().length)
+      if(input.val().length > 0) {
+        // console.log(input.val().length);
         flyingLabel.addClass('hacker-form__label--flying');
-      }
-
-      else {
-        console.log($(this).val())
+      } else {
+        // console.log(input.val());
         flyingLabel.removeClass('hacker-form__label--flying');
       }
+    }
+
+    inputFields.on('focus blur keyup', function(e){
+      onFocusBlurKeyup(e, $(this));
     });
 
-    inputArea.on('focus blur', function(e) {
-      // TODO: implement
+    inputArea.on('focus blur keyup', function(e) {
+      onFocusBlurKeyup(e, $(this));
     });
   });
 
