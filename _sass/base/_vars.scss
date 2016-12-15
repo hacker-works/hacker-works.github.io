@@ -1,15 +1,14 @@
 // Our variables
 $inconsolata-font-family: 	Inconsolata, monospace;
 $roboto-font-family:      	"Roboto Mono", monospace;
-$base-font-family:        	"avenir-book", verdana, arial, sans-serif;
+$avenir-book-font-family: 	"avenir-book", sans-serif;
 $avenir-medium-font-family: "avenir-medium", sans-serif;
 $avenir-heavy-font-family: 	"avenir-heavy", sans-serif;
+$base-font-family:        	$avenir-book-font-family;
 $base-font-size:         		1.6rem;
 $reset-font-size:						10px;
 $small-font-size:        		$base-font-size * 0.875;
 $base-line-height:     	   	1.5;
-//remove
-$spacing-unit: 1;
 
 //Brand Colors
 //Got them from the palette of the sketch file
@@ -40,6 +39,8 @@ $greyish-two:       rgb(173, 173, 173);
 $white-three:       rgb(254, 254, 254);
 $white-four:        rgb(239, 239, 239);
 
+$error-color:				#af5b5b;
+
 $text-color:       $black;
 $background-color: #002b36;
 $brand-color:      #FF8900;
@@ -48,6 +49,24 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Mixins
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+//MQ (Media Query)
+
+$handheld: 				 375px;
+$tablet-portrait:  768px;
+$tablet-landscape: 1024px;
+$laptop: 					 1366px;
+$laptop-large:		 1440px;
+$desktop: 				 1600px;
+$dekstop-large: 	 1900px;
+
+@mixin mq($device) {
+	@media only screen and (min-width: $device) {
+		@content;
+	}
+}
 
 /* SUSY The oddbird */
 $susy: (
@@ -59,18 +78,32 @@ $susy: (
 
 /* Text styles */
 %masthead-text {
-	font-family: $avenir-heavy-font-family;
+	font-family: $avenir-book-font-family;
 	font-size: 6.4rem;
-	line-height: 1.1;
+	font-weight: 900;
+	line-height: 1.12;
 	letter-spacing: -0.2px;
 	color: #fff;
 
-	@media only screen and (min-width: 768px) {
-		font-size: 11.391rem;
+	@include mq($tablet-portrait) {
+		font-size: 11rem;
+		line-height: 1.13;
+		letter-spacing: -0.3px;
+
 	}
 
-	@media only screen and (min-width: 1366px) {
-		font-size: 14.4rem;
+	@include mq($tablet-landscape) {
+		font-size: 10.6rem;
+		line-height: 1.17;
+		letter-spacing: -0.3px;
+		color: #ffffff;
+	}
+
+	@include mq($laptop) {
+		font-size: 13.6rem;
+		line-height: 1.02;
+		letter-spacing: -0.4px;
+		color: #fff;
 	}
 }
 
@@ -80,8 +113,16 @@ $susy: (
 	line-height: 1.1;
 	color: $purplish-brown;
 
-	@media only screen and (min-width: 640px) {
+	@include mq($tablet-portrait) {
 		font-size: 6rem;
+	}
+
+	@include mq($tablet-landscape) {
+		font-size: 7.2rem;
+	}
+
+	@include mq($desktop) {
+		font-size: 8.6rem;
 	}
 }
 
@@ -113,38 +154,57 @@ $susy: (
 
 %subheading {
 	font-family: $inconsolata-font-family;
-	font-size: 1.896rem;
-	font-weight: 300;
+	font-size: 1.8rem;
+	font-weight: normal;
 	letter-spacing: -0.1px;
 	color: $greyish-brown;
 	opacity: 0.4;
 
-	@media only screen and (min-width: 640px) {
-		font-size: 2.844rem;
+	@include mq($tablet-portrait) {
+		font-size: 2.8rem;
+	}
+
+	@include mq($tablet-landscape) {
+		font-size: 3rem;
+	}
+
+	@include mq($desktop) {
+		font-size: 3.2rem;
 	}
 }
 
 %list-green {
 	margin: 3.511rem 0;
 	font-family: $inconsolata-font-family;
-	font-size: 1.896rem;
-	line-height: 1.5;
+	font-size: 1.6rem;
+	font-weight: bold;
+	line-height: 1.6;
 	letter-spacing: -0.1px;
 	color: $purplish-brown;
 
-	@media only screen and (min-width: 640px) {
-		font-size: 2.25rem;
+	@include mq($tablet-portrait) {
+		font-size: 2rem;
+		line-height: 1.75;
+	}
+
+	@include mq($tablet-landscape) {
+		line-height: 1.6;
+	}
+
+	@include mq($laptop) {
+		line-height: 1.75;
 	}
 }
 
 %page-text {
 	font-family: $base-font-family;
-	font-size: 1.896rem;
-	line-height: 1.875;
+	font-size: $base-font-size;
+	line-height: 1.75;
 	color: $greyish-brown;
 
-	@media only screen and (min-width: 640px) {
-		font-size: 2.25rem;
+	@include mq($tablet-portrait) {
+		font-size: 2rem;
+		line-height: 1.8;
 	}
 }
 
@@ -178,4 +238,20 @@ $susy: (
 	@media only screen and (min-width: 1440px) {
 		font-size: 3.8rem;
 	}
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+**  Clearfix
+\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+%clearfix {
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.cf {
+	@extend %clearfix;
 }

@@ -6,6 +6,7 @@
   .page {
     padding-top: 5rem;
   }
+
   .home-service-texts {
     h2 {
       margin: 0 0 2.25rem;
@@ -31,7 +32,7 @@
   .home-service__secondary-txt {
     display: none;
 
-    @media only screen and (min-width: 1024px) {
+    @include mq($laptop) {
       display: block;
       flex: 0 1 auto;
 

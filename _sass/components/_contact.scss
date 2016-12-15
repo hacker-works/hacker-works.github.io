@@ -8,7 +8,7 @@
 	textarea,
 	label {
 		font-family: $inconsolata-font-family;
-		font-size: 1.5rem;
+		font-size: 1.8rem;
 		color: $purplish-brown;
 
 		@media only screen and (min-width: 640px) {
@@ -25,31 +25,39 @@
 
 	input {
 		line-height: 1.5;
-	}
+		transition: border-color 0.1s ease-in;
 
-	fieldset {
-		position: relative;
-		margin: 3rem 0 1rem;
+		&:invalid {
+			outline: none;
+			border-bottom-color: $error-color;
+			box-shadow: none;
+			transition: border-color 0.1s ease-out;
+		}
 	}
 
 	label {
 		position: absolute;
 		top: 3.75rem;
 		left: 0;
-		transition: all 0.1s ease;
+		transition: all 0.1s ease-in;
+		text-transform: lowercase;
 		color: $brand-black;
 
 		span {
-			opacity: 0.1;
+			opacity: 0;
 			font-size: 1.5rem;
 
-			@media only screen and (min-width: 768px) {
+			@include mq($tablet-portrait) {
+				opacity: 0.1;
 				font-size: inherit;
 			}
 		}
 
 		&.hacker-form__label--flying {
-			top: 0;
+			top: 1.5rem;
+			opacity: 0.4;
+			font-size: 1.4rem;
+			transition-timing-function: ease-out;
 
 			span {
 				opacity: 0;
@@ -58,30 +66,42 @@
 	}
 
 	button {
-		margin-top: 3rem;
+		margin-top: 5rem;
 	}
 }
 
-
 .hacker-form__field {
 	position: relative;
-	margin: 3rem 0 0;
+	margin: 0.8rem 0 0;
 	padding: 0;
 	border: none;
 
 	&:first-of-type {
 		margin-top: 0;
+
+		@media only screen and (min-width: 1024px) and (max-width: 1365px) {
+			margin-top: 0.8rem;
+		}
+
+		@include mq($laptop-large) {
+			margin-top: 2rem;
+		}
+
+		@include mq($desktop) {
+			margin-bottom: 0.5rem;
+		}
 	}
 
 	textarea {
+		padding: 0.5rem gutters(12);
 		border: 1px solid;
 		border-top-color: transparent;
 		border-right-color: transparent;
 		border-left-color: transparent;
 		transition: all 0.2s ease;
+		transition-delay: 0.1s;
 
 		&:focus {
-			padding: gutters(12);
 			border-color: currentColor;
 			min-height: 16rem;
 		}
@@ -89,6 +109,8 @@
 }
 
 .hacker-form__field--textarea {
+	margin-top: 2rem;
+
 	label {
 		position: static;
 	}
@@ -100,32 +122,25 @@
 \~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .stay-in-touch {
 	position: relative;
-	z-index: 10;
 	background-color: $brand-green;
 	text-align: center;
 	color: $purplish-brown;
 
 	.wrapper {
-		max-width: 64rem;
+		max-width: 60rem;
 		margin: 0 auto;
 		padding-top: 3rem;
 		padding-bottom: 6rem;
 		position: relative;
-		z-index: 10;
 		overflow-y: auto;
+	}
+
+	h1 {
+		margin-bottom: 0;
 	}
 
 	input {
 		margin: 3.5rem auto 0;
-		text-align: center;
-	}
-
-	.btn-close {
-		position: absolute;
-		top: 3rem;
-		right: 0;
-		z-index: 15;
-		font-size: 2rem;
 	}
 }
 
@@ -139,23 +154,69 @@
 	position: fixed;
 	top: 0;
 	left: -150%;
-	// left: -150%;
 	z-index: 100;
 	text-align: left;
 	transition: left .4s ease-in-out,
 							transform .4s linear;
 
+	@include mq($laptop) {
+		background: $brand-green url('/assets/images/svg/hi.svg') no-repeat right 25rem;
+		background-size: 50%;
+
+		.wrapper {
+			@include container();
+		}
+	}
+
 	&.is-visible {
 		left: 0;
-		// transform: rotateZ(0);
 	}
 
 	&.is-scrollable {
 		height: 100%;
 	}
 
+	.wrapper {
+		max-width: none;
+
+		@include mq($tablet-landscape) {
+			padding-top: 5.5rem;
+			padding-left: 12.7rem;
+		}
+	}
+
+	h1 {
+		margin-top: 4.25rem;
+
+		& + p {
+			margin-bottom: 0.5rem;
+
+			@include mq($tablet-portrait) {
+				margin-top: 5rem;
+			}
+
+			@include mq($tablet-landscape) {
+				margin-top: 3rem;
+			}
+
+			@include mq($laptop-large) {
+				margin-top: 2rem;
+			}
+		}
+
+		@include mq($tablet-portrait) {
+			font-size: 7.2rem;
+		}
+
+		@include mq($laptop-large) {
+			font-size: 8.6rem;
+		}
+	}
+
 	input,
 	textarea {
+		float: left;
+		display: block;
 		width: 100%;
 		text-align: left;
 	}
@@ -165,16 +226,70 @@
 		height: 6rem;
 	}
 
-	@media only screen and (min-width: 1024px) {
-		background: $brand-green url('/assets/images/svg/hi.svg') no-repeat right center;
-		background-size: 50%;
+	label > span {
+		@include mq($tablet-portrait) {
+			font-size: 2rem;
+		}
+	}
 
-		.wrapper {
-			@include container();
+	.hacker-form {
+
+		@include mq($tablet-portrait) {
+			width: 47rem;
+			margin-top: 2rem;
 		}
 
-		.hacker-form {
-			width: span(5 of 12);
+		@include mq($tablet-landscape) {
+			width: 75rem;
+			margin-top: 1rem;
+
+			button {
+				margin-top: 3.7rem;
+			}
+		}
+
+		@include mq($laptop) {
+			width: 47rem;
+		}
+	}
+
+	.hacker-form__field {
+		width: 100%;
+
+		@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+
+			&[data-field="name"] {
+				@include span(4.75);
+				margin-right: gutters(6);
+			}
+			&[data-field="email"] {
+				@include span(7 last);
+
+				& + .hacker-form__field {
+					clear: both;
+				}
+			}
+		}
+
+
+		@include mq($tablet-portrait) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.btn-close {
+		position: absolute;
+		top: 3rem;
+		right: 0;
+		z-index: 15;
+		font-size: 2rem;
+
+		@include mq($tablet-portrait) {
+			font-size: 2.5rem;
+
+			span {
+				display: none;
+			}
 		}
 	}
 }
