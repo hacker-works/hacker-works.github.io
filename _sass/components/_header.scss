@@ -172,6 +172,13 @@
 
 	&.is-airborne {
 
+		@include mq($laptop) {
+			height: 0;
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
+		}
+
 		svg {
 			transform: scale(1.25);
 		}
