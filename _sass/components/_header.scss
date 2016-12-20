@@ -273,10 +273,25 @@ svg,
 
 .manifesto {
 
+	.logo-mobile {
+		height: 0;
+		opacity: 0;
+	}
+
+	.logo-normal {
+		height: auto;
+		opacity: 1;
+	}
+
 	.site-header__burger {
 
 		&::before {
 			display: none;
 		}
+	}
+
+	.jobs-application-button {
+		background-color: $azul;
+		color: #fff;
 	}
 }

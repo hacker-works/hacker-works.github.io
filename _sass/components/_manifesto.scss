@@ -3,7 +3,7 @@
 .site-header--manifesto {
 	background-color: $black;
 
-	@media only screen and (min-width: 1024px) {
+	@include mq($tablet-landscape) {
 		padding-top: 17.086rem;
 		padding-bottom: 4.267rem;
 
@@ -18,7 +18,7 @@
 		}
 	}
 
-	@media only screen and (min-width: 1440px) {
+	@include mq($laptop-large) {
 
 		.wrapper {
 			max-width: 85vw;
@@ -36,7 +36,7 @@
 	//The back to the site link
 	.back-to-site {
 
-		@media only screen and (min-width: 1024px) {
+		@include mq($tablet-landscape) {
 			position: absolute;
 			top: calc(11.391rem - 6.4rem);
 			right: 6.4rem;
@@ -60,13 +60,13 @@
 		letter-spacing: -0.1px;
 		color: #fff;
 
-		@media only screen and (min-width: 768px) {
-			font-size: 2.844rem;
+		@include mq($tablet-portrait) {
+			font-size: 2.8rem;
 		}
 	}
 
 	//sadly we put the @mq because of the h1
-	@media only screen and (min-width: 1366px) {
+	@include mq($laptop) {
 		padding-bottom: 0;
 		background-image: none;
 
@@ -105,6 +105,15 @@
 
 	.site-footer {
 		background-color: $brand-green;
+		padding-bottom: 7.2rem;
+
+		@include mq($tablet-portrait) {
+			padding-bottom: 10.6rem;
+		}
+
+		@include mq($tablet-landscape) {
+			padding-bottom: 7.2rem;
+		}
 
 		p {
 			color: $brand-black;
@@ -122,15 +131,15 @@
 
 	.logo-normal {
 
-		@media only screen and (min-width: 768px) {
-			height: calc(5.063rem + 0.296rem);
+		@include mq($tablet-portrait) {
+			height: 5.2rem;
 		}
 
-		@media only screen and (min-width: 1024px) {
-			height: calc(6.4em + 0.667rem);
+		@include mq($tablet-portrait) {
+			height: 7rem;
 		}
 
-		@media only screen and (min-width: 1366px) {
+		@include mq($laptop) {
 			height: 128px;
 			margin-bottom: 13rem;
 		}
@@ -153,7 +162,7 @@
 		flex-direction: column-reverse;
 	}
 
-	@media only screen and (min-width: 1024px) {
+	@include mq($tablet-landscape) {
 
 		.content {
 			flex-direction: row-reverse;
@@ -167,7 +176,14 @@
 		figure {
 			flex: 0 0 span(6);
 			margin: 0 0 0 span(1);
-			transform: translateX(span(1));
+			transform: translateX(15%);
+		}
+	}
+
+	@include mq($laptop) {
+
+		figure {
+			transform: none;
 		}
 	}
 }
@@ -177,7 +193,7 @@
 	padding: 4.267rem 0 3.375rem;
 	background-image: linear-gradient(to left, #00d9bf, #24efa6);
 
-	@media only screen and (min-width: 1366px) {
+	@include mq($laptop) {
 		max-width: 85vw;
 		margin: 0 auto;
 		margin-bottom: -52rem;
@@ -207,13 +223,13 @@
 		margin: 0;
 		margin-bottom: 3.6rem;
 		font-size: 3.2rem;
-		font-weight: 500;
-		line-height: 1.2;
+		font-weight: 600;
+		line-height: 1.25;
 		letter-spacing: -0.1px;
 		color: $black-three;
 
-		@media only screen and (min-width: 1200px) {
-			font-size: calc(3.375rem + 0.444rem);
+		@include mq($tablet-portrait) {
+			font-size: 3.8rem;
 		}
 	}
 
@@ -233,16 +249,20 @@
 		background: url(/assets/images/svg/gt.svg) no-repeat 0 0.667rem;
 		font-family: $inconsolata-font-family;
 		font-size: 2rem;
+		line-height: 1.7;
 		letter-spacing: -0.2px;
-		color: #1f694e;
+		color: $dark-green-blue;
 
-		@media only screen and (min-width: 768px) {
-			font-size: 2.25rem;
+		@include mq($tablet-portrait) {
+			line-height: 1.75;
+			font-size: 2.4rem;
 			background-position: 0 calc(0.667rem + 0.296rem);
 		}
 
-		@media only screen and (min-width: 1024px) {
-			font-size: calc(3.375rem - 0.296rem);
+		@include mq($tablet-portrait) {
+			line-height: 1.67;
+			font-size: 3rem;
+			letter-spacing: -0.3px;
 		}
 	}
 }
@@ -251,6 +271,14 @@
 .manifesto-principles {
 	padding-top: 5.063rem;
 	background: url(/assets/images/svg/characters.svg) repeat-x 0 -1.9rem;
+
+	@include mq($tablet-portrait) {
+		padding-top: 6.5rem;
+	}
+
+	@include mq($tablet-landscape) {
+		padding-top: 8.2rem;
+	}
 
 	@media only screen and (min-width: 1366px) {
 		background: url(/assets/images/svg/characters-green-huge.png) repeat-x 50% 0;
@@ -273,9 +301,27 @@
 
 	h2 {
 		margin-top: 0;
-		font-size: 2.25rem;
+		margin-bottom: 3.6rem;
+		line-height: 1.64;
+		font-size: 2.2rem;
 		font-weight: 500;
+		letter-spacing: -0.1px;
 		color: $aqua-green;
+
+		@include mq($tablet-portrait) {
+			margin-bottom: 0;
+			line-height: 2.07;
+			font-size: 2.8rem;
+			font-weight: normal;
+		}
+
+		@include mq($tablet-landscape) {
+			margin-top: 2rem;
+			margin-bottom: 9.6rem;
+			line-height: 1.1;
+			font-size: 4.2rem;
+			font-weight: 500;
+		}
 
 		@media only screen and (min-width: 1366px) {
 			margin-bottom: 9.6rem;
@@ -284,15 +330,17 @@
 	}
 
 	h3 {
-		margin: 0.444em 0;
+		margin: 0.444em 0 3.4rem;
+		line-height: 1.1;
 		font-family: $inconsolata-font-family;
 		font-size: 4.2rem;
-		line-height: 1.1;
 		color: $purplish-brown;
 
-		@media only screen and (min-width: 1024px) {
-			margin-bottom: 4.6rem;
-			font-size: 7.594rem;
+		@include mq($tablet-portrait) {
+			margin-top: 2.5rem;
+			margin-bottom: 4rem;
+			line-height: 1.17;
+			font-size: 7.2rem;
 		}
 	}
 
@@ -300,7 +348,8 @@
 		margin: 0;
 		padding-bottom: 2.844rem;
 		position: relative;
-		font-size: 1.896rem;
+		line-height: 1.7;
+		font-size: 2rem;
 		color: $purplish-brown;
 
 		&:last-of-type {
@@ -318,10 +367,13 @@
 			color: $brand-green;
 		}
 
-		@media only screen and (min-width: 1024px) {
+		@include mq($tablet-portrait) {
+			line-height: 1.8;
+		}
+
+		@include mq($tablet-landscape) {
 			padding-left: 7rem;
 			padding-bottom: 3.375rem;
-			font-size: calc(2.25rem - 0.296rem);
 
 			&::before {
 				position: absolute;
@@ -385,19 +437,22 @@
 	}
 
 	h3 {
-		margin: 0 0 5.063rem;
+		margin: 0 0 6.5rem;
 	}
 
 	p {
 		border-color: #fff;
 		font-family: $inconsolata-font-family;
+		line-height: 1.7;
+		font-size: 2rem;
 
 		&:before {
 			color: #fff;
 		}
 
-		@media only screen and (min-width: 768px) {
-			font-size: calc(2.25rem + 0.296rem)
+		@include mq($tablet-portrait) {
+			line-height: 1.67;
+			font-size: 2.4rem;
 		}
 
 		@media only screen and (min-width: 1024px) {
@@ -497,7 +552,7 @@
 //The last of the principles
 .manifesto-principles__impact {
 
-	@media only screen and (min-width: 1024px) {
+	@include mq($tablet-landscape) {
 
 		.content {
 			display: flex;
