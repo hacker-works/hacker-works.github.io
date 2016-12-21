@@ -369,9 +369,6 @@
 
 		@include mq($tablet-portrait) {
 			line-height: 1.8;
-		}
-
-		@include mq($tablet-landscape) {
 			padding-left: 7rem;
 			padding-bottom: 3.375rem;
 
@@ -552,6 +549,10 @@
 //The last of the principles
 .manifesto-principles__impact {
 
+	.content > figure {
+		margin: 8rem 0 10rem;
+	}
+
 	@include mq($tablet-landscape) {
 
 		.content {
@@ -559,6 +560,7 @@
 			flex-direction: row;
 			justify-content: space-between;
 			align-content: stretch;
+			margin: 0;
 			padding-bottom: 14.4rem;
 
 			> div {
