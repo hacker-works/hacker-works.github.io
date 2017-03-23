@@ -13,7 +13,7 @@ url: "http://hacker.works" # the base hostname & protocol for your site
 exclude: [Gemfile, Gemfile.lock]
 twitter_username: npacemo
 github_username:  hacker-works
-social_description: We are hacker.works. We combine the hacker mindset with modern approaches for building technology and creating businesses.
+social_description: We are a team of full-stack hackers. We build prototypes, MVPs and scalable solutions by using the hacker mindset to overcome constraints.
 
 # Build settings
 markdown: kramdown
