@@ -1,6 +1,6 @@
 ---
 layout: manifestos
-title: hacker.works manifesto
+title: Our manifesto
 permalink: /manifesto/
 ---
 ## We stand by the following principles:

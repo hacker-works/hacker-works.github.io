@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title }}. {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
 
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
@@ -11,7 +11,19 @@
     <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
     <link href='https://www.google.com/fonts#UsePlace:use/Collection:Roboto+Mono' rel='stylesheet' type='text/css'>
 
-    <link rel="shortcut icon" type="image/svg" href="/assets/images/svg/h_w-small-dark.svg">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} {% else %} {{ site.title }} {% endif %}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="{{ site.social_description }}" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} {% else %} {{ site.title }} {% endif %}" />
+    <meta name="twitter:description" content="{{ site.social_description }}" />
+
+    <meta property="og:image" content="/assets/images/impact.png" />
+    <meta name="twitter:image" content="/assets/images/impact.png" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
     <!--
 
