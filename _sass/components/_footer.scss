@@ -7,19 +7,17 @@
 	text-align: center;
 
 	@include mq($tablet-portrait) {
-		padding-top: 13rem;
+		padding-top: 7.2rem;
+    padding-bottom: 8.2rem;
 	}
 
   @media only screen and (min-width: 769px) and (max-width: 1024px) {
 		padding-top: 6rem;
+    padding-bottom: 7.4rem;
 	}
 
 	@include mq($laptop) {
 		padding-top: calc(22.7rem - 6rem);
-	}
-
-	.wrapper {
-		max-width: 60rem;
 	}
 
 	p {

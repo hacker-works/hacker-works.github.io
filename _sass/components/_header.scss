@@ -208,12 +208,31 @@ svg,
 \~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .site-header--mini {
 	padding-top: 3.5rem;
-	padding-bottom: 2.6rem;
+	padding-bottom: 5.3rem;
+
+  @media only screen and (min-width: 800px) and (max-width: 1024px) {
+    padding-bottom: 2.4rem;
+  }
 
 	.site-header__burger {
 		flex: 0 0 auto;
-		position: relative;
-		transform: translateX(-2px);
+		position: fixed;
+    top: 45px;
+    right: 31px;
+
+    @media only screen and (min-width: 768px) and (max-width: 799px) {
+      top: 73px;
+      right: 60px;
+    }
+
+    @media only screen and (min-width: 800px) and (max-width: 1024px) {
+      top: 74px;
+      right: 82px;
+    }
+
+		@media only screen and (min-width: 1025px) {
+			display: none;
+		}
 
 		&::before {
 			content: 'Open positions';
@@ -227,6 +246,7 @@ svg,
 			font-size: 1.896rem;
 			text-transform: uppercase;
 			text-align: right;
+      letter-spacing: -0.8px;
 			color: $azul;
 			opacity: 0;
 			transition: opacity 0.2s ease;
@@ -252,10 +272,11 @@ svg,
 
 		svg {
 			transition: stroke 2s ease;
-		}
 
-		@media only screen and (min-width: 1025px) {
-			display: none;
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        width: 34px;
+        height: 22px;
+      }
 		}
 	}
 
@@ -281,10 +302,6 @@ svg,
   @media only screen and (min-width: 768px) and (max-width: 859px) {
     padding-top: 12.2rem;
     padding-bottom: 3.6rem;
-
-    .site-header__logo {
-      transform: translateX(1.4rem);
-    }
   }
 
   @media only screen and (min-width: 860px) and (max-width: 1024px) {
