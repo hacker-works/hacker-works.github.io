@@ -1,27 +1,41 @@
 .jobs {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
-**  Headers
+**  Headings
 \~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 //Title of the job offering
 	h1 {
 		@extend %page-heading;
+    margin-top: 0;
 		margin-bottom: 2.8rem;
+
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+      margin-top: 1.8rem;
+      margin-bottom: 3.9rem;
+    }
 	}
 
 	h2 {
 		@extend %jobs-introtext;
 		margin-bottom: 2.844rem;
+
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+      margin-bottom: 5.2rem;
+    }
 	}
 
 	h3 {
-		margin: 3.375rem 0;
+		margin: 0 0 2.4rem;
 		font-family: $inconsolata-font-family;
 		font-size: 2.25rem;
 		font-weight: bold;
-		line-height: 1.5;
+		line-height: 1.32;
 		letter-spacing: -0.1px;
 		color: $azul;
+
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+      margin-bottom: 3rem;
+    }
 	}
 
 	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
@@ -31,15 +45,24 @@
 	ul {
 		@extend %u-clear-list;
 		@extend %list-green;
-		border-left: 1px solid #979797;
+    margin-bottom: 2.2rem;
+		border-left: 0.04rem solid #979797;
+    font-size: 1.8rem;
+    font-weight: normal;
 
 		li {
 			padding-left: 2.25rem;
 			margin-bottom: 1.5rem;
+      line-height: 1.7;
+
+      @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        line-height: 1.5;
+        padding-left: 3rem;
+      }
 
 			strong {
 				display: inline-block;
-				margin-bottom: 1rem;
+				margin-bottom: 1.3rem;
 			}
 
 			//The list with the green >
@@ -49,16 +72,17 @@
 
 				& > li {
 					position: relative;
+          padding-left: 0;
+					text-indent: 30px;
 
 					&::before {
 						content: url(/assets/images/svg/li.svg);
-						float: left;
 						display: block;
 						width: 0.9rem;
 						height: 1.1rem;
 						position: absolute;
 						top: 3px;
-						left: 0;
+						left: -26px;
 					}
 				}
 			}
@@ -78,9 +102,18 @@
 	line-height: 1.8;
 	color: $greyish-brown;
 
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    padding: 8rem 15rem 9rem 13rem;
+  }
+
 	p {
-		margin-top: 0;
+		margin: 0;
 	}
+
+  a {
+    color: $azul-three;
+  }
+
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
@@ -110,7 +143,7 @@
 		width: 25%;
 	}
 
-	@media only screen and (min-width: 1024px) {
+	@media only screen and (min-width: 1025px) {
 		right: 0 !important;
 	}
 }
@@ -158,7 +191,7 @@
 
 .site-header--mini,
 .jobs {
-	@media only screen and (min-width: 1024px) {
+	@media only screen and (min-width: 1025px) {
 
 		.wrapper {
 			width: 66.6%;
@@ -169,8 +202,16 @@
 	@media only screen and (min-width: 1420px) {
 		.wrapper {
 			width: 80%;
-			padding-right: 20%;
 			margin: 0 auto;
+      padding-right: 20%;
 		}
 	}
+}
+
+.jobs {
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .wrapper {
+      padding-right: 17rem;
+    }
+  }
 }

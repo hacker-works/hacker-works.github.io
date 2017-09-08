@@ -22,6 +22,7 @@ $brand-blue-3:      rgb(44, 83, 240);
 //Colour palette
 //Got them from zeplin
 $azul:              rgb(44, 83, 240);
+$azul-three:        rgb(63, 97, 235);
 $greenblue:         rgb(33, 216, 148);
 $aqua-green:        rgb(17, 235, 157);
 $purplish-brown:    rgb(51, 49, 50);
@@ -135,9 +136,15 @@ $susy: (
 
 %jobs-introtext {
 	font-family: $base-font-family;
-	font-size: 2.25rem;
-	line-height: 1.5;
+	font-size: 2.2rem;
+	line-height: 1.64;
 	color: $greyish-brown;
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    font-size: 2rem;
+    line-height: 1.8;
+    font-weight: normal;
+  }
 }
 
 %button-link {

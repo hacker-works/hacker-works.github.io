@@ -207,8 +207,8 @@ svg,
 **	The header for the job listing
 \~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .site-header--mini {
-	padding-top: 3.375rem;
-	padding-bottom: 3.375rem;
+	padding-top: 3.5rem;
+	padding-bottom: 2.6rem;
 
 	.site-header__burger {
 		flex: 0 0 auto;
@@ -254,7 +254,7 @@ svg,
 			transition: stroke 2s ease;
 		}
 
-		@media only screen and (min-width: 1024px) {
+		@media only screen and (min-width: 1025px) {
 			display: none;
 		}
 	}
@@ -264,6 +264,7 @@ svg,
 		opacity: 0;
 	}
 
+  // Media query for the --mini
 	@media only screen and (min-width: 768px) {
 
 		.logo-mobile {
@@ -276,6 +277,19 @@ svg,
 			opacity: 1;
 		}
 	}
+
+  @media only screen and (min-width: 768px) and (max-width: 859px) {
+    padding-top: 12.2rem;
+    padding-bottom: 3.6rem;
+
+    .site-header__logo {
+      transform: translateX(1.4rem);
+    }
+  }
+
+  @media only screen and (min-width: 860px) and (max-width: 1024px) {
+    padding-top: 9.2rem;
+  }
 }
 
 .manifesto {

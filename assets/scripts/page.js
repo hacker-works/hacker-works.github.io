@@ -5,15 +5,17 @@ $(document).ready(function(){
     if (t.hasClass('is-triggered')) {
       t.removeClass('is-triggered');
       $('.jobs-nav').removeClass('is-visible')
+      $('body').removeClass('not-scrollable')
     }
 
     else {
       t.addClass('is-triggered');
       $('.jobs-nav').addClass('is-visible')
+      $('body').addClass('not-scrollable')
     }
 
     return false;
-  })
+  });
 
   //Show the contact form
   $('.get-in-touch__btn').on('click', function(){
