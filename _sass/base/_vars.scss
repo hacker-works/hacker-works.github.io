@@ -122,9 +122,9 @@ $susy: (
 		font-size: 7.2rem;
 	}
 
-	@include mq($desktop) {
-		font-size: 8.6rem;
-	}
+  @include mq($laptop) {
+    font-size: 5.2rem;
+  }
 }
 
 %page-heading-minor {

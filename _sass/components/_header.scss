@@ -93,6 +93,7 @@
 
 //The roated text to scroll
 .rotated-text {
+  display: inline-block;
 	transform: translateX(-0.5px);
 	margin-top: 6rem;
 
@@ -214,6 +215,11 @@ svg,
     padding-bottom: 2.4rem;
   }
 
+  @include mq($laptop-large) {
+    padding-top: 100px;
+    padding-bottom: 85px;
+  }
+
 	.site-header__burger {
 		flex: 0 0 auto;
 		position: fixed;
@@ -306,6 +312,12 @@ svg,
 
   @media only screen and (min-width: 860px) and (max-width: 1024px) {
     padding-top: 9.2rem;
+  }
+
+  @include mq($laptop-large) {
+    .logo-normal {
+      width: 157px;
+    }
   }
 }
 
