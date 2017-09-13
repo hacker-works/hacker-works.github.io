@@ -10,7 +10,7 @@
 	overflow: hidden;
 
 	@include mq($tablet-portrait) {
-		padding-top: 19.6rem;
+		padding-top: 12rem;
 	}
 
 	@include mq($tablet-landscape) {
@@ -26,7 +26,7 @@
 		margin: 0;
 
 		@include mq ($tablet-portrait) {
-			margin: 0 0 3.6rem;
+			margin: 3.6rem 0;
 		}
 
 		@include mq($tablet-landscape) {
@@ -82,8 +82,9 @@
 .site-header__logo > img {
 	height: 2.6rem;
 
-	@media only screen and (min-width: 1024px) {
+	@media only screen and (min-width: 768px) {
 		height: 3.6rem;
+		width: 21.2rem;
 	}
 
 	@media only screen and (min-width: 1366px) {
@@ -122,36 +123,30 @@
 	}
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
-**  The Wrapper be FLEXING
-\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.site-header--mini,
-.logo-n-burger {
-
-	.wrapper {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-
-		&::after {
-			display: none;
-		}
-	}
-}
 
 .logo-n-burger {
 	width: 100%;
-	position: fixed;
-	top: 3.5rem;
-	left: 0;
-	z-index: 50;
+
+  .site-header__burger {
+    position: fixed;
+    z-index: 50;
+  }
 
 	@include mq($tablet-portrait) {
-		top: 12rem;
 
 		.site-header__burger {
-			transform: translateY(-3rem);
+      top: 70px;
+      right: 63px;
+
+      svg {
+        width: 35px;
+        height: 25px;
+      }
+		}
+
+		.wrapper {
+			padding-right: 4.8rem;
+			padding-left: 4.8rem;
 		}
 	}
 
@@ -225,6 +220,7 @@ svg,
 		position: fixed;
     top: 45px;
     right: 31px;
+    cursor: pointer;
 
     @media only screen and (min-width: 768px) and (max-width: 799px) {
       top: 73px;
@@ -263,7 +259,6 @@ svg,
 		}
 
 		&.is-triggered {
-			position: relative;
 			z-index: 1000;
 
 			&::before {
@@ -295,8 +290,7 @@ svg,
 	@media only screen and (min-width: 768px) {
 
 		.logo-mobile {
-			height: 0;
-			opacity: 0;
+			display: none;
 		}
 
 		.logo-normal {

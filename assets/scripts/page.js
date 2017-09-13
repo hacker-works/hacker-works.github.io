@@ -138,10 +138,15 @@ $(document).ready(function(){
 
     //Some sticky stuff
     $(function(){
+      var buttonHeight, buttonOffset, headerHeight, colorCheckpoint;
+      buttonHeight = $('.site-header__burger--nav').outerHeight();
+      buttonOffset = $('.site-header__burger--nav').offset().top;
+      console.log(buttonOffset);
+      headerHeight = $('.site-header').outerHeight();
+      colorCheckpoint = headerHeight - (buttonOffset + buttonHeight);
       $(window).scroll(function(){
-        var headerHeight = $('.site-header').height();
 
-        if($(this).scrollTop() >= headerHeight){
+        if($(this).scrollTop() >= colorCheckpoint){
             $('.logo-n-burger').addClass('is-airborne');
             $('.navigation').addClass('is-dark');
         }
