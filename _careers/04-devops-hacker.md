@@ -33,11 +33,13 @@ permalink: /careers/devops-hacker/
 * **You know how to:**
   * deliver working products and meet deadlines
   * share ideas and get the team of hackers to think together about solving problems
+
 * **You know what:**
   * corners can be cut and what corners should never be cut
 
 * **You can and will:**
   * push back a problematic requirement if you know what the problems with it will be and can explain the same to the non-technical people
+
 * **You have:**
   * broad technical background
 
@@ -55,4 +57,4 @@ permalink: /careers/devops-hacker/
 * Cassandra database
 * clusters
 * big data
-
+* Scrum or Kanban
