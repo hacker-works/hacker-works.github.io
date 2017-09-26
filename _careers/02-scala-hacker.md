@@ -54,7 +54,7 @@ permalink: /careers/scala-hacker/
 * concurrency models (multithreading, Actor model, CSP, concurrency abstractions, etc)
 * messaging technologies
 * performance testing
-* NoSQL databases (e.g. MongoDB, Cassandra)
+* NoSQL databases (e.g. MongoDB or Cassandra)
 * big data technologies (e.g. Spark)
 * Linux-based systems in production
 * deploying and troubleshooting on application servers
