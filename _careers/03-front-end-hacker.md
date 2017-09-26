@@ -15,7 +15,7 @@ permalink: /careers/front-end-hacker/
 * JavaScript
 * responsive web
 * ECMAScript 6, CoffeeScript, TypeScript — any of these is a plus
-* understanding of front-end development frameworks — Angular, React.js/Redux
+* understanding of front-end development frameworks — Angular, React.js or Vue.js
 * good understanding of HTTP, REST services and JSON
 
 ### Seniority requirements:
@@ -26,13 +26,17 @@ permalink: /careers/front-end-hacker/
   * able to solve hard problems (the ones that you won’t gonna find on StackOverflow)
   * able and expected to adopt new development and productivity tools — Zeplin.io, Sketch
   * able and expected to mentor junior and intermediate developers
+
 * **You know how to:**
   * deliver working products and meet deadlines
   * test your code using a variety of browsers and devices
+
 * **You know what:**
   * corners can be cut and what corners should never be cut
+
 * **You can and will:**
   * push back a problematic requirement if you know what the problems with it will be and can explain the same to the non-technical people
+
 * **You have:**
   * good understanding in at least one front-end stack of tools and frameworks
 

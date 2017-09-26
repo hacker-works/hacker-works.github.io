@@ -24,6 +24,7 @@ permalink: /careers/product-owner/
   * keeping in touch with every stakeholder of the product regularly
   * giving feedback to the hackers team about the accomplished work, and about the process and interactions
   * deciding what to build and what not together with the team
+
 * **You know how to:**
   * delight customers
   * measure progress - value delivered at each Sprint
@@ -32,6 +33,7 @@ permalink: /careers/product-owner/
 * **You know what:**
   * corners can be cut and what corners should never be cut
   * technical debt is, and how to manage it
+
 * **You can and will:**
   * report to management and stakeholders (e.g. budget burndown, release burndown)
   * share insights throughout the team regarding the product (blogging, internal & external conferences, etc.)
@@ -50,7 +52,7 @@ permalink: /careers/product-owner/
 
 * git
 * JIRA, Trello, ASANA, etc.
-* wiki-systems
+* Wiki systems
 * spreadsheets
 * wireframing and prototyping tools
 * keynote and presentation tools
@@ -59,4 +61,4 @@ permalink: /careers/product-owner/
 
 * business model canvas
 * value proposition canvas
-
+* #NoEstimates
