@@ -15,7 +15,7 @@ permalink: /careers/full-stack-hacker/
 * Spring or Play/Akka or Express.js or others
 * relational databases and object-relational mapping (experience with Hibernate or Slick or others)
 * JavaScript
-* React.js or experince with Angular.js or Vue.js or other
+* React.js or experience with Angular.js or Vue.js or other
 * unit testing, functional testing and/or BDD frameworks
 
 ### Seniority requirements:
