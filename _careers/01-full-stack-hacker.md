@@ -10,12 +10,12 @@ permalink: /careers/full-stack-hacker/
 
 ### Technical requirements:
 
-* Java or Scala
+* Java or Scala or Node.js
 * OOP design skills
-* Spring or Play/Akka or others
+* Spring or Play/Akka or Express.js or others
 * relational databases and object-relational mapping (experience with Hibernate or Slick or others)
 * JavaScript
-* Angular or React.js or Vue.js
+* React.js or experience with Angular.js or Vue.js or other
 * unit testing, functional testing and/or BDD frameworks
 
 ### Seniority requirements:
@@ -46,8 +46,8 @@ permalink: /careers/full-stack-hacker/
 ### Some familiarity and understanding of the following tools:
 
 * git
-* Maven, Gradle or SBT or other build tools
-* Jenkins
+* Maven, Gradle, SBT or NPM or other build tools
+* Jenkins or other analogous tool 
 * logging
 * ssh
 * shell scripting and command line tools
